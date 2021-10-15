@@ -92,9 +92,9 @@
   /* all child elements are on a grid */
   display: grid;
   font-weight: 300;
-  grid-template-columns: repeat(4, auto);
+  grid-template-columns: repeat(5, auto);
   grid-gap: 40px;
-  width: 80vw;
+  width: 90vw;
   margin-top: 0px;
   /* floats links to the end */
   justify-content: end;
