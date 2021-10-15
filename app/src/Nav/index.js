@@ -75,8 +75,8 @@ const Auth = () => {
 
   return isAuthenticated ? (
     <>
-      {/* <img src={user.picture} alt="" /> */}
-      Hello, {user.given_name} <Logout />
+      {/* <p className="greetings">Hey, {user.given_name}!</p> */}
+      <Logout />
     </>
   ) : (
     <Login />

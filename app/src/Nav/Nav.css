@@ -64,6 +64,12 @@
   display: none;
 }
 
+.greetings {
+  color: #8e5ee2;
+  font-size: 19px;
+  margin-top: 34.5px;
+}
+
 /* CHILD - <i> Hamburger Menu */
 .fa-bars {
   font-size: 1.8rem;
@@ -167,7 +173,7 @@ button:hover {
 }
 
 /* mobile menu? */
-@media screen and (max-width: 812px) {
+@media screen and (max-width: 900px) {
   .navbar {
     display: flex;
     height: 80px;
@@ -187,10 +193,7 @@ button:hover {
     color: #f6f5f5;
     background-color: #431195;
   }
-}
 
-/* NOTE: Button doesn't show up on Mobile */
-@media screen and (max-width: 812px) {
   .logo-text {
     font-size: 2.4rem;
     margin-top: 15px;
@@ -245,12 +248,12 @@ button:hover {
     /* up & down */
     flex-direction: column;
     /* distance between */
-    grid-gap: 45px;
+    grid-gap: 10px;
     /* pushes entire menu up */
-    padding-bottom: 45px;
+    padding-bottom: 70px;
     position: absolute;
     width: 100%;
-    height: 50vh;
+    height: 55vh;
     /* height of header */
     top: 80px;
     /* hides automatically 'til it slides out */
@@ -310,6 +313,11 @@ button:hover {
     border-radius: 0;
   }
 
+  button {
+    margin-top: 15px;
+    margin: 0 auto;
+  }
+
   .btn {
     display: none;
   }
@@ -318,9 +326,6 @@ button:hover {
 @media screen and (max-width: 500px) {
   .navbar-logo {
     font-size: 1.6rem;
-  }
-  button {
-    margin-top: 0px;
   }
 }
 
