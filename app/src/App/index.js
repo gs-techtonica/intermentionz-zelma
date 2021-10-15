@@ -1,3 +1,4 @@
+// Home Page
 import * as React from "react";
 
 import { Routes, Route } from "react-router-dom";
@@ -8,7 +9,7 @@ import useApi from "../auth/useApi";
 import useAuth0 from "../auth/useAuth0";
 import { Protected } from "../auth/widgets";
 
-import styles from "./styles.module.scss";
+import "./App.css";
 
 const App = () => {
   const { isAuthenticated, user } = useAuth0();
@@ -43,10 +44,23 @@ const Home = () => {
 
   return (
     <>
-      <header className={styles.header}>
+      {/* <header className={styles.header}>
         <h1>{process.env.REACT_APP_TITLE}</h1>
         <p>{process.env.REACT_APP_SUBTITLE}</p>
-      </header>
+      </header> */}
+      <div>
+        <div className="hero-wrapper">
+          <section className="text-wrapper">
+            <h1 className="hero-text">Reinforce, Remind, Redirect</h1>
+            <h4 className="hero-subtext">
+              Use Cognitive Restructuring to Change the Way You Think.
+            </h4>
+            <h4 className="hero-subtext">
+              {/* Never forget - <i>you are worthy</i>. */}
+            </h4>
+          </section>
+        </div>
+      </div>
       {isAuthenticated ? <Tasks /> : null}
     </>
   );
