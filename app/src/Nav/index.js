@@ -73,13 +73,18 @@ const Nav = () => {
 const Auth = () => {
   const { isAuthenticated, user } = useAuth0();
 
+  // when user is logged in, Logout shows; and vice versa
   return isAuthenticated ? (
     <>
-      {/* <p className="greetings">Hey, {user.given_name}!</p> */}
-      <Logout />
+      <div log-btn>
+        {/* <p className="greetings">Hey, {user.given_name}!</p> */}
+        <Logout />
+      </div>
     </>
   ) : (
-    <Login />
+    <div log-btn>
+      <Login />
+    </div>
   );
 };
 
