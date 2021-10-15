@@ -24,10 +24,10 @@
   align-items: center;
   /* height: 60px; */
   margin-left: 40px;
-  max-width: 88%;
+  max-width: 90%;
 }
 
-/* PARENT3 - applied to logo LINK <a> */
+/* 'InterMention' - applied to logo LINK <a> */
 .navbar-logo {
   display: flex;
   /* floats logo to left */
@@ -41,7 +41,6 @@
   color: white;
   cursor: pointer;
 }
-
 .logo-text {
   font-size: 2.2rem;
   margin-top: 10px;
@@ -141,9 +140,9 @@
   margin-left: -20px;
 }
 
-button.nav-btn,
-button.btn {
+button {
   /* styling */
+  height: 30px;
   width: 90px;
   background-color: transparent;
   border: 1px solid #411195;
@@ -153,6 +152,7 @@ button.btn {
   font-size: 1.1rem;
   cursor: pointer;
   /* positioning */
+  margin-top: 30px;
   margin-left: -15px;
   padding: 5px 3px;
 }
@@ -318,6 +318,9 @@ button:hover {
 @media screen and (max-width: 500px) {
   .navbar-logo {
     font-size: 1.6rem;
+  }
+  button {
+    margin-top: 0px;
   }
 }
 
