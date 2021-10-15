@@ -1,0 +1,13 @@
+-- add phone number 
+ALTER TABLE users
+ADD phone text default '';
+
+-- add Affirmations table
+create table affirmations(
+  aff_id SERIAL PRIMARY KEY,
+  id INT NOT NULL,
+  aff_text TEXT DEFAULT '',
+  CONSTRAINT fk_user FOREIGN KEY(id) REFERENCES users(id)
+); 
+
+INSERT INTO affirmations(id, aff_text) VALUES (2, 'You are nice');

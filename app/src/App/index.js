@@ -40,7 +40,7 @@ const App = () => {
 };
 
 const Home = () => {
-  const { isAuthenticated } = useAuth0();
+  const { isLoading, isAuthenticated } = useAuth0();
 
   return (
     <>
@@ -48,24 +48,61 @@ const Home = () => {
         <h1>{process.env.REACT_APP_TITLE}</h1>
         <p>{process.env.REACT_APP_SUBTITLE}</p>
       </header> */}
-      <div>
-        <div className="hero-wrapper">
-          <section className="text-wrapper">
-            <h1 className="hero-text">Reinforce, Remind, Redirect</h1>
-            <h4 className="hero-subtext">
-              Use Cognitive Restructuring to Change the Way You Think.
-            </h4>
-            <h4 className="hero-subtext">
-              {/* Never forget - <i>you are worthy</i>. */}
-            </h4>
-          </section>
+      {isLoading ? (
+        <>
+          <div>Loading ...</div>
+        </>
+      ) : !isAuthenticated ? (
+        <div>
+          <div className="hero-wrapper">
+            <section className="text-wrapper">
+              <h1 className="hero-text">Reinforce, Remind, Redirect</h1>
+              <h4 className="hero-subtext">
+                Use Cognitive Restructuring to Change the Way You Think.
+              </h4>
+              <h4 className="hero-subtext">
+                {/* Never forget - <i>you are worthy</i>. */}
+              </h4>
+            </section>
+          </div>
         </div>
-      </div>
-      {isAuthenticated ? <Tasks /> : null}
+      ) : (
+        <Dashboard />
+      )}
     </>
   );
 };
 
-const Dashboard = () => <h1>Dashboard</h1>;
+const Dashboard = () => {
+  const { user } = useAuth0();
+  console.log(user);
+  return (
+    <>
+      <h1>Dashboard</h1>
+      {/* <p className="greetings"> Hey, {user.given_name}!</p> */}
+      <table className="center">
+        <thead>
+          <tr>
+            <tr>
+              <th>Affirmations</th>
+            </tr>
+            <tbody>
+              <tr key={user.email}>
+                <td>{user.email}</td>
+              </tr>
+              <tr key={user.email}>
+                <td>{user.email}</td>
+              </tr>
+
+              <tr key={user.email}>
+                <td>{user.email}</td>
+              </tr>
+            </tbody>
+          </tr>
+        </thead>
+      </table>
+    </>
+  );
+};
 
 export default App;

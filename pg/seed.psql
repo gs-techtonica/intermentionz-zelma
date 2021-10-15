@@ -21,6 +21,37 @@ SET default_tablespace = '';
 SET default_table_access_method = heap;
 
 --
+-- Name: affirmations; Type: TABLE; Schema: public; Owner: -
+--
+
+CREATE TABLE public.affirmations (
+    aff_id integer NOT NULL,
+    id integer NOT NULL,
+    aff_text text DEFAULT ''::text
+);
+
+
+--
+-- Name: affirmations_aff_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE public.affirmations_aff_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: affirmations_aff_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE public.affirmations_aff_id_seq OWNED BY public.affirmations.aff_id;
+
+
+--
 -- Name: tasks; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -61,7 +92,8 @@ CREATE TABLE public.users (
     family_name text NOT NULL,
     picture text,
     email text,
-    sub text NOT NULL
+    sub text NOT NULL,
+    phone text DEFAULT ''::text
 );
 
 
@@ -80,10 +112,26 @@ ALTER TABLE public.users ALTER COLUMN id ADD GENERATED ALWAYS AS IDENTITY (
 
 
 --
+-- Name: affirmations aff_id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.affirmations ALTER COLUMN aff_id SET DEFAULT nextval('public.affirmations_aff_id_seq'::regclass);
+
+
+--
 -- Name: tasks id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.tasks ALTER COLUMN id SET DEFAULT nextval('public.tasks_id_seq'::regclass);
+
+
+--
+-- Data for Name: affirmations; Type: TABLE DATA; Schema: public; Owner: -
+--
+
+COPY public.affirmations (aff_id, id, aff_text) FROM stdin;
+1	2	You are nice
+\.
 
 
 --
@@ -99,9 +147,16 @@ COPY public.tasks (id, name, user_id) FROM stdin;
 -- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: -
 --
 
-COPY public.users (id, given_name, family_name, picture, email, sub) FROM stdin;
-2	Zelma	Sedano	https://lh3.googleusercontent.com/a-/AOh14GjQ1jSrAVjBr2CtOVTh4dwdD9QFM7tbGZDhLDIm0A=s96-c	zvsedano@gmail.com	google-oauth2|102656422993994048685
+COPY public.users (id, given_name, family_name, picture, email, sub, phone) FROM stdin;
+2	Zelma	Sedano	https://lh3.googleusercontent.com/a-/AOh14GjQ1jSrAVjBr2CtOVTh4dwdD9QFM7tbGZDhLDIm0A=s96-c	zvsedano@gmail.com	google-oauth2|102656422993994048685	
 \.
+
+
+--
+-- Name: affirmations_aff_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+--
+
+SELECT pg_catalog.setval('public.affirmations_aff_id_seq', 1, true);
 
 
 --
@@ -115,7 +170,15 @@ SELECT pg_catalog.setval('public.tasks_id_seq', 8, true);
 -- Name: users_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.users_id_seq', 10, true);
+SELECT pg_catalog.setval('public.users_id_seq', 70, true);
+
+
+--
+-- Name: affirmations affirmations_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.affirmations
+    ADD CONSTRAINT affirmations_pkey PRIMARY KEY (aff_id);
 
 
 --
@@ -148,6 +211,14 @@ ALTER TABLE ONLY public.users
 
 ALTER TABLE ONLY public.tasks
     ADD CONSTRAINT fk_user FOREIGN KEY (user_id) REFERENCES public.users(id) ON DELETE CASCADE;
+
+
+--
+-- Name: affirmations fk_user; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.affirmations
+    ADD CONSTRAINT fk_user FOREIGN KEY (id) REFERENCES public.users(id);
 
 
 --
