@@ -10,6 +10,7 @@ import useAuth0 from "../auth/useAuth0";
 import { Protected } from "../auth/widgets";
 
 import "./App.css";
+// test comment
 
 const App = () => {
   const { isAuthenticated, user } = useAuth0();
