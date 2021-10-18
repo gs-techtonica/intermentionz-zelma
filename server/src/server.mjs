@@ -1,13 +1,13 @@
 import express from "express";
 import mime from "mime-types";
 
-import affirmationsRouter from "./affirmationsRouter.mjs";
+// import affirmationsRouter from "./affirmationsRouter.mjs";
 import jwtCheck from "./jwtCheck.mjs";
 import taskRouter from "./taskRouter.mjs";
 import userRouter from "./userRouter.mjs";
 
 const app = express();
-app.use("/api/affirmations", jwtCheck, affirmationsRouter);
+// app.use("/api/affirmations", jwtCheck, affirmationsRouter);
 app.use("/api/tasks", jwtCheck, taskRouter);
 app.use("/api/users", jwtCheck, userRouter);
 
