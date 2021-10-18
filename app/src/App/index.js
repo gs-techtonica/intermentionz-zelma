@@ -3,6 +3,7 @@ import * as React from "react";
 
 import { Routes, Route } from "react-router-dom";
 
+import Affirmations from "../Affirmations";
 import Nav from "../Nav";
 import Tasks from "../Tasks";
 import useApi from "../auth/useApi";
@@ -80,6 +81,9 @@ const Dashboard = () => {
   return (
     <>
       <h1>Dashboard</h1>
+      {/* nothing is displaying*/}
+      <Affirmations />
+      <Tasks />
       {/* <p className="greetings"> Hey, {user.given_name}!</p> */}
       <table className="center">
         <thead>
@@ -88,13 +92,6 @@ const Dashboard = () => {
               <th>Affirmations</th>
             </tr>
             <tbody>
-              <tr key={user.email}>
-                <td>{user.email}</td>
-              </tr>
-              <tr key={user.email}>
-                <td>{user.email}</td>
-              </tr>
-
               <tr key={user.email}>
                 <td>{user.email}</td>
               </tr>

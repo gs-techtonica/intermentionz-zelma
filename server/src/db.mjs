@@ -12,6 +12,12 @@ export const getTasks = (sub) =>
     "SELECT tasks.* FROM tasks LEFT JOIN users on user_id=users.id WHERE sub=$<sub>",
     { sub },
   );
+// gets affirmation
+export const getAffirmations = (sub) =>
+  db.any(
+    "SELECT affirmations.* FROM affirmations LEFT JOIN users on user_id=users.id WHERE sub=$<sub>",
+    { sub },
+  );
 // adds tasks using sub & name
 export const addTask = (sub, name) =>
   db.one(
@@ -20,7 +26,15 @@ export const addTask = (sub, name) =>
       RETURNING *`,
     { sub, name },
   );
-
+// adds affirmations using sub & name
+export const addAffirmation = (sub, name) =>
+  db.one(
+    `INSERT INTO affirmations(user_id, aff_text)
+      VALUES((SELECT id FROM users WHERE sub=$<sub>), $<name>)
+      RETURNING *`,
+    { sub, name },
+  );
+// adds a user to the database
 export const addOrUpdateUser = (user) =>
   db.one(
     `INSERT INTO users(given_name, family_name, picture, email, sub)
