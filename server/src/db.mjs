@@ -6,12 +6,13 @@ import pgp from "pg-promise";
 
 const db = initDb();
 
+// gets tasks based off sub?
 export const getTasks = (sub) =>
   db.any(
     "SELECT tasks.* FROM tasks LEFT JOIN users on user_id=users.id WHERE sub=$<sub>",
     { sub },
   );
-
+// adds tasks using sub & name
 export const addTask = (sub, name) =>
   db.one(
     `INSERT INTO tasks(user_id, name)

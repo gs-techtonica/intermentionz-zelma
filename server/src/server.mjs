@@ -6,12 +6,11 @@ import taskRouter from "./taskRouter.mjs";
 import userRouter from "./userRouter.mjs";
 
 const app = express();
-
+// routes - add an affirmations one
 app.use("/api/tasks", jwtCheck, taskRouter);
 app.use("/api/users", jwtCheck, userRouter);
 
-// Do not comment out or delete this end point. The React development server
-// won't start until it pings this end point successfully.
+// Do not comment out or delete this end point. The React development server won't start until it pings this end point successfully.
 app.get("/api/ping", (request, response) =>
   response.json({ response: "pong" }),
 );

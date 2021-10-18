@@ -1,3 +1,4 @@
+// Router for adding a new User to the DB upon login
 import express from "express";
 
 import * as db from "./db.mjs";
