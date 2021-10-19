@@ -79,21 +79,6 @@ const Dashboard = () => {
   console.log(user);
   return (
     <>
-      <h1>Dashboard</h1>
-      {/* nothing is displaying*/}
-      {/* <p className="greetings"> Hey, {user.given_name}!</p> */}
-      <table className="center">
-        <thead>
-          <tr>
-            <th>Affirmations</th>
-          </tr>
-          <tbody>
-            <tr key={user.email}>
-              <td>{user.email}</td>
-            </tr>
-          </tbody>
-        </thead>
-      </table>
       <Tasks />
     </>
   );

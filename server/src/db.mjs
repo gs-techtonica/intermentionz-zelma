@@ -13,11 +13,13 @@ export const getTasks = (sub) =>
     { sub },
   );
 // gets affirmation
-export const getAffirmations = (sub) =>
+export const getMoods = (sub) =>
   db.any(
     "SELECT affirmations.* FROM affirmations LEFT JOIN users on user_id=users.id WHERE sub=$<sub>",
     { sub },
   );
+// db.any("SELECT * FROM moodtable WHERE user_id=$<user_id>", { user_id });
+
 // adds tasks using sub & name
 export const addTask = (sub, name) =>
   db.one(

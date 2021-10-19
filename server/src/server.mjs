@@ -2,6 +2,7 @@ import express from "express";
 import mime from "mime-types";
 
 // import affirmationsRouter from "./affirmationsRouter.mjs";
+import affirmationRouter from "./affirmationRouter.mjs";
 import jwtCheck from "./jwtCheck.mjs";
 import taskRouter from "./taskRouter.mjs";
 import userRouter from "./userRouter.mjs";
@@ -9,6 +10,7 @@ import userRouter from "./userRouter.mjs";
 const app = express();
 // app.use("/api/affirmations", jwtCheck, affirmationsRouter);
 app.use("/api/tasks", jwtCheck, taskRouter);
+app.use("/api/affirmation", jwtCheck, affirmationRouter);
 app.use("/api/users", jwtCheck, userRouter);
 
 // Do not comment out or delete this end point. The React development server won't start until it pings this end point successfully.
