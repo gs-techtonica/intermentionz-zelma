@@ -78,9 +78,9 @@ const Dashboard = () => {
   const { user } = useAuth0();
   console.log(user);
   return (
-    <>
+    <div className="dashboard-wrapper">
       <Tasks />
-    </>
+    </div>
   );
 };
 

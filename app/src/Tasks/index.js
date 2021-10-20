@@ -3,7 +3,8 @@ import * as React from "react";
 
 import useApi from "../auth/useApi";
 
-import styles from "./styles.module.scss";
+// had to change name of file to get it to work
+import styles from "./tasks.scss";
 
 const Tasks = () => {
   // states & imports
@@ -22,10 +23,13 @@ const Tasks = () => {
     !loading && loadTasks();
   }, [loading, loadTasks]);
 
+  // when it's loading show nothing, otherwise show tasks/affirmations
   return loading ? null : (
     <section>
-      <TaskList {...{ tasks }} />
-      <AddTask {...{ addTask }} />
+      <div className="affirmation-wrapper">
+        <TaskList className="huh" {...{ tasks }} />
+        <AddTask {...{ addTask }} />
+      </div>
     </section>
   );
 };
@@ -34,14 +38,16 @@ const Tasks = () => {
 const TaskList = ({ tasks }) => (
   // center
   <table className="center">
-    <thead>
+    {/* <thead> */}
+    <tbody>
       <th>Affirmations</th>
       {tasks.map(({ id, name }) => (
         <tr key={id}>
-          <td>{name}</td>
+          <td className="text-center">{name}</td>
         </tr>
       ))}
-    </thead>
+    </tbody>
+    {/* </thead> */}
   </table>
 );
 
@@ -59,7 +65,7 @@ const AddTask = ({ addTask }) => {
   };
 
   return (
-    <div className="">
+    <div>
       <form className="center" {...{ onSubmit }}>
         <label>
           New task:{" "}

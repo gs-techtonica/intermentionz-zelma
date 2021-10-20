@@ -1,0 +1,53 @@
+// .list {
+//   list-style: none;
+//   margin: 2rem 0 3rem;
+//   padding-left: 0;
+
+//   li {
+//     margin-top: 1rem;
+
+//     &::before {
+//       // content: "🐶";
+//       font-size: 1.5rem;
+//       margin-right: 1.25rem;
+//     }
+//   }
+// }
+
+.affirmation-wrapper {
+  // pushes table down
+  padding-top: 150px;
+}
+
+.center {
+  margin: 0 auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+table {
+  margin-top: 30px;
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 300px;
+  max-height: 300px; // not working
+}
+
+tbody {
+  margin-top: 30px;
+}
+
+// commented out
+thead {
+  width: 300px;
+}
+
+th,
+td {
+  border: 1px solid black;
+  padding: 10px;
+  overflow: hidden;
+  // overflow: scroll
+}

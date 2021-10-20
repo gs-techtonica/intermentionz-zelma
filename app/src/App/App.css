@@ -9,19 +9,6 @@
 }
 /* test comment */
 
-table {
-  border-collapse: collapse;
-}
-th,
-td {
-  border: 1px solid black;
-  padding: 10px;
-}
-/* hero section */
-.center {
-  margin: 0 auto;
-}
-
 .hero-wrapper {
   background: url("../1_components/images/serene.jpg") no-repeat center center
     fixed;
@@ -102,6 +89,14 @@ button.login:hover {
   color: white;
   opacity: 0.9;
   transition: all 0.5s ease;
+}
+
+.dashboard-wrapper {
+  background: url("../1_components/images/serene.jpg") no-repeat center center
+    fixed;
+  background-size: cover;
+  height: 106vh;
+  margin-top: -130px;
 }
 
 @media screen and (max-width: 1030px) {
