@@ -2,21 +2,22 @@ import express from "express";
 import mime from "mime-types";
 
 // import affirmationsRouter from "./affirmationsRouter.mjs";
-import affirmationRouter from "./affirmationRouter.mjs";
 import jwtCheck from "./jwtCheck.mjs";
 import taskRouter from "./taskRouter.mjs";
 import userRouter from "./userRouter.mjs";
 
 const app = express();
+
 // app.use("/api/affirmations", jwtCheck, affirmationsRouter);
 app.use("/api/tasks", jwtCheck, taskRouter);
-app.use("/api/affirmation", jwtCheck, affirmationRouter);
 app.use("/api/users", jwtCheck, userRouter);
 
 // Do not comment out or delete this end point. The React development server won't start until it pings this end point successfully.
 app.get("/api/ping", (request, response) =>
   response.json({ response: "pong" }),
 );
+
+console.log("process.env:" + process.env?.SERVE_REACT?.toLowerCase());
 
 if (process.env?.SERVE_REACT?.toLowerCase() === "true") {
   app.use(
@@ -37,3 +38,6 @@ const port = process.env.PORT || 4000;
 app.listen(port, () => {
   console.info(`Example server listening at http://localhost:${port}`);
 });
+
+// console.log("in the bottom of server.mjs");
+// everything works in this file, maybe

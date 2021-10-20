@@ -16,8 +16,13 @@ const Tasks = () => {
     async () => setTasks(await apiClient.getTasks()),
     [apiClient],
   );
-  const addTask = (task) => apiClient.addTask(task).then(loadTasks);
   // addTask func - loads tasks after adding task
+  // taskName is more descriptive and similar to apiClient
+  const addTask = (taskName) => apiClient.addTask(taskName).then(loadTasks);
+
+  // delete & load task - you could name it anything, but id is more descriptive
+  // 'tasks' implies it's an object, when in reality it's just the id
+  const deleteTask = (id) => apiClient.deleteTask(id).then(loadTasks);
 
   React.useEffect(() => {
     !loading && loadTasks();
@@ -27,7 +32,9 @@ const Tasks = () => {
   return loading ? null : (
     <section>
       <div className="affirmation-wrapper">
-        <TaskList {...{ tasks }} />
+        {/* creating obj w/ 2 attributes - tasks & deleteTasks (you could do "tasks: taskState" tasks(L) = name, tasks(R) is the value) */}
+        {/* 'object shorthand syntax' */}
+        <TaskList {...{ tasks, deleteTask }} />
         <AddTask {...{ addTask }} />
       </div>
     </section>
@@ -35,22 +42,31 @@ const Tasks = () => {
 };
 
 // TaskList component
-const TaskList = ({ tasks }) => {
+const TaskList = ({ tasks, deleteTask }) => {
   return (
     <div>
       <table className="center">
         {/* <thead> */}
         <tbody>
-          <th>Affirmations</th>
+          <th colspan="2">Affirmations</th>
           {tasks.map(({ id, name }) => (
             <tr key={id}>
-              <td className="text-center">{name}</td>
+              <td className="text-center">
+                {/* <input type="checkbox" id="delete" /> */}
+                {name}
+              </td>
+              <td>
+                {/* you have access to id from tasks */}
+                <button className="delete-btn" onClick={() => deleteTask(id)}>
+                  Delete
+                </button>
+              </td>
             </tr>
           ))}
         </tbody>
         {/* </thead> */}
       </table>
-      <button className="delete-btn">Delete</button>
+      {/* when you click 'delete' is deletes task*/}
     </div>
   );
 };

@@ -12,13 +12,6 @@ export const getTasks = (sub) =>
     "SELECT tasks.* FROM tasks LEFT JOIN users on user_id=users.id WHERE sub=$<sub>",
     { sub },
   );
-// gets affirmation
-export const getMoods = (sub) =>
-  db.any(
-    "SELECT affirmations.* FROM affirmations LEFT JOIN users on user_id=users.id WHERE sub=$<sub>",
-    { sub },
-  );
-// db.any("SELECT * FROM moodtable WHERE user_id=$<user_id>", { user_id });
 
 // adds tasks using sub & name
 export const addTask = (sub, name) =>
@@ -28,14 +21,13 @@ export const addTask = (sub, name) =>
       RETURNING *`,
     { sub, name },
   );
-// adds affirmations using sub & name
-export const addAffirmation = (sub, name) =>
+// correct syntax? should I be returning after?
+export const deleteTask = (sub, name) =>
   db.one(
-    `INSERT INTO affirmations(user_id, aff_text)
-      VALUES((SELECT id FROM users WHERE sub=$<sub>), $<name>)
-      RETURNING *`,
+    "DELETE FROM tasks(user_id, name) WHERE (SELECT id FROM users WHERE sub=$<sub>) $<name>",
     { sub, name },
   );
+
 // adds a user to the database
 export const addOrUpdateUser = (user) =>
   db.one(

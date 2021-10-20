@@ -8,6 +8,8 @@ const makeApi = (accessToken) => {
     getTasks: () => _get("/api/tasks"),
     // getAffirmations: () => _get("/api/affirmations"),
     addTask: (name) => _post("/api/tasks", { name }),
+    // you should specify a server header to have a bearer token
+    deleteTask: (id) => _delete("/api/tasks", { id }),
     addAffirmations: (name) => _post("/api/affirmations"),
     addOrUpdateUser: (user) => _post("/api/users", { user }),
   };
@@ -27,14 +29,20 @@ const makeApi = (accessToken) => {
     return result;
   };
 
-  const _fetch = (url, options) =>
-    fetch(url, {
+  // _fetch is a wrapper func that adds some custom functionality to fetch
+  const _delete = (url) => _fetch(url, { method: "DELETE" });
+  // this is where it's accessing
+  // internal API feature
+  const _fetch = (url, options) => {
+    console.log("inside fetch", options);
+    return fetch(url, {
       ...options,
       headers: {
         ...(options?.headers ?? {}),
         Authorization: `Bearer ${accessToken}`,
       },
     });
+  };
 
   return actions;
 };
