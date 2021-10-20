@@ -4,7 +4,7 @@ import * as React from "react";
 import useApi from "../auth/useApi";
 
 // had to change name of file to get it to work
-import styles from "./tasks.scss";
+import "./tasks.scss";
 
 const Tasks = () => {
   // states & imports
@@ -28,7 +28,7 @@ const Tasks = () => {
     <section>
       <div className="affirmation-wrapper">
         <TaskList {...{ tasks }} />
-        <AddTask className="huh" {...{ addTask }} />
+        <AddTask {...{ addTask }} />
       </div>
     </section>
   );
@@ -37,7 +37,7 @@ const Tasks = () => {
 // TaskList component
 const TaskList = ({ tasks }) => {
   return (
-    <div className="aff-wrapper">
+    <div>
       <table className="center">
         {/* <thead> */}
         <tbody>
@@ -78,7 +78,7 @@ const AddTask = ({ addTask }) => {
             value={task}
           />
         </label>
-        <button disabled={!canAdd} className="add-btn">
+        <button className="add-btn" disabled={!canAdd}>
           Add
         </button>
       </form>
