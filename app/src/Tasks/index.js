@@ -55,7 +55,7 @@ const TaskList = ({ tasks, deleteTask }) => {
                 {/* <input type="checkbox" id="delete" /> */}
                 {name}
               </td>
-              <td>
+              <td className="delete-column">
                 {/* you have access to id from tasks */}
                 <button className="delete-btn" onClick={() => deleteTask(id)}>
                   Delete
@@ -88,10 +88,10 @@ const AddTask = ({ addTask }) => {
     <div className="center">
       <form {...{ onSubmit }}>
         <label>
-          New task:{" "}
           <input
             onChange={(e) => setTask(e.currentTarget.value)}
             value={task}
+            placeholder="Enter Affirmation/Mention"
           />
         </label>
         <button className="add-btn" disabled={!canAdd}>

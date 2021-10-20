@@ -27,6 +27,7 @@
 
 .text-center {
   text-align: center;
+  width: 300px;
 }
 
 table {
@@ -54,15 +55,28 @@ td {
   padding: 10px;
   // overflow: scroll
 }
-// why won't this work?
-td.checkbox {
-  width: 10px;
+
+.delete-column {
+  column-width: 50px;
 }
 
 label {
+  margin-top: 15px;
   margin-bottom: -15px;
   // aligns center
   text-align: center;
+  display: block;
+}
+
+input {
+  width: 300px;
+  padding: 7px;
+  text-align: center;
+  border-radius: 6px;
+  border: none;
+}
+input:focus {
+  outline: none;
 }
 
 button.delete-btn,
@@ -84,4 +98,8 @@ button:hover {
   background: #702fe0;
   color: white;
   transition: all 0.5s ease;
+}
+
+.add-btn {
+  text-align: center; // ?
 }
