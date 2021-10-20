@@ -27,29 +27,33 @@ const Tasks = () => {
   return loading ? null : (
     <section>
       <div className="affirmation-wrapper">
-        <TaskList className="huh" {...{ tasks }} />
-        <AddTask {...{ addTask }} />
+        <TaskList {...{ tasks }} />
+        <AddTask className="huh" {...{ addTask }} />
       </div>
     </section>
   );
 };
 
 // TaskList component
-const TaskList = ({ tasks }) => (
-  // center
-  <table className="center">
-    {/* <thead> */}
-    <tbody>
-      <th>Affirmations</th>
-      {tasks.map(({ id, name }) => (
-        <tr key={id}>
-          <td className="text-center">{name}</td>
-        </tr>
-      ))}
-    </tbody>
-    {/* </thead> */}
-  </table>
-);
+const TaskList = ({ tasks }) => {
+  return (
+    <div className="aff-wrapper">
+      <table className="center">
+        {/* <thead> */}
+        <tbody>
+          <th>Affirmations</th>
+          {tasks.map(({ id, name }) => (
+            <tr key={id}>
+              <td className="text-center">{name}</td>
+            </tr>
+          ))}
+        </tbody>
+        {/* </thead> */}
+      </table>
+      <button className="delete-btn">Delete</button>
+    </div>
+  );
+};
 
 const AddTask = ({ addTask }) => {
   const [task, setTask] = React.useState("");
@@ -65,8 +69,8 @@ const AddTask = ({ addTask }) => {
   };
 
   return (
-    <div>
-      <form className="center" {...{ onSubmit }}>
+    <div className="center">
+      <form {...{ onSubmit }}>
         <label>
           New task:{" "}
           <input
@@ -74,7 +78,7 @@ const AddTask = ({ addTask }) => {
             value={task}
           />
         </label>
-        <button disabled={!canAdd} className={styles.button}>
+        <button disabled={!canAdd} className="add-btn">
           Add
         </button>
       </form>

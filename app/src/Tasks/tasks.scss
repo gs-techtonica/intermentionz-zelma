@@ -17,6 +17,8 @@
 .affirmation-wrapper {
   // pushes table down
   padding-top: 150px;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 .center {
@@ -31,7 +33,7 @@ table {
   margin-top: 30px;
   border-collapse: collapse;
   table-layout: fixed;
-  width: 300px;
+  width: 400px;
   max-height: 300px; // not working
 }
 
@@ -50,4 +52,35 @@ td {
   padding: 10px;
   overflow: hidden;
   // overflow: scroll
+}
+
+label {
+  margin-bottom: -15px;
+  // aligns center
+  text-align: center;
+}
+
+.huh {
+  margin-left: 10%;
+}
+
+button.delete-btn,
+button.add-btn {
+  /* styling */
+  height: 30px;
+  width: 90px;
+  background-color: #411195;
+  border: 1px solid #411195;
+  border-radius: 25px;
+  color: white;
+  font-weight: 300;
+  font-size: 1.1rem;
+  cursor: pointer;
+  /* margin-left: -15px; */
+  padding: 5px 3px;
+}
+button:hover {
+  background: #702fe0;
+  color: white;
+  transition: all 0.5s ease;
 }
