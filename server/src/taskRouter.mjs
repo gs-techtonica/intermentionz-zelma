@@ -25,8 +25,10 @@ router.post("/", async (request, response) => {
 router.delete("/:deleteId", async (request, response) => {
   console.log("inside delete");
   // you're assigning request.params.deleteId to variable
-  // const deleteId = request.params.deleteId;
-  await db.deleteTask(request.user.sub, request.params.deleteId);
+  const deleteId = request.params.deleteId;
+  // converting the string to an int
+  let strId = parseInt(deleteId);
+  await db.deleteTask(strId);
   // if you want to use deleteId variable, you take whole express request.body.name & replace that with deleteId
   // if it was apart of request, it'd be request.deleteId, which it's not
 

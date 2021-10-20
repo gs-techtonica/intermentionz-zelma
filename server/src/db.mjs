@@ -22,11 +22,8 @@ export const addTask = (sub, name) =>
     { sub, name },
   );
 // correct syntax? should I be returning after?
-export const deleteTask = (sub, name) =>
-  db.one(
-    "DELETE FROM tasks(user_id, name) WHERE (SELECT id FROM users WHERE sub=$<sub>) $<name>",
-    { sub, name },
-  );
+export const deleteTask = (id) =>
+  db.one("DELETE FROM tasks WHERE id=$<id> RETURNING *", { id });
 
 // adds a user to the database
 export const addOrUpdateUser = (user) =>
