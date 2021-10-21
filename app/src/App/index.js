@@ -76,21 +76,41 @@ const Home = () => {
   );
 };
 
-const Dashboard = () => {
+const Dashboard = (addTask) => {
   const { user } = useAuth0();
-  // console.log(user);
+  console.log(user);
   return (
     <div className="dashboard-wrapper">
       <Tasks />
-      <API />
+      <API {...{ addTask }} />
     </div>
   );
 };
 
 const API = () => {
+  const { apiClient } = useApi();
+
+  const [tasks, setTasks] = React.useState([]);
+  const [task, setTask] = React.useState("");
   const [responseObj, setResponseObj] = React.useState({});
   const [quote, setQuote] = React.useState("");
-  let [error, setError] = React.useState(false);
+
+  const loadTasks = React.useCallback(
+    async () => setTasks(await apiClient.getTasks()),
+    [apiClient],
+  );
+  const addTask = (taskName) => apiClient.addTask(taskName).then(loadTasks);
+
+  const canAdd = task !== "";
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    if (canAdd) {
+      addTask(task);
+      setTask("");
+    }
+  };
+
   // fetch should be inside a useEffect so it doesn't get caught in an infinite loop when assigning response to 'setResponseObj' state
   useEffect(() => {
     fetch(
@@ -113,9 +133,9 @@ const API = () => {
         // console.log("response.status is " + response.status);
         // 2nd version: 200 is a string
         // // in this API, we had to use success to check if it passed or not
-        // if (!response.success) {
-        //   throw new Error();
-        // }
+        if (!response.success) {
+          throw new Error();
+        }
 
         // console.log("this is the responseObj");
         // takes take the json & saves json response as responseObj state
@@ -124,13 +144,25 @@ const API = () => {
   }, []);
   console.log("quotes are", quote);
 
+  // I want to uncomment this
   // .catch((err) => {
   //   setError(true);
   //   // setLoading(false);
   //   console.log("error");
   // });
 
-  return <div className="quote-wrapper">{quote}</div>;
+  return (
+    <div className="quote-wrapper">
+      <h2 className="quote-header">Quote of the Day</h2>
+      <form {...{ onSubmit }}>
+        <p className="quote-p">"{quote}"</p>
+
+        <button className="add-btn-1" disabled={!canAdd}>
+          Add
+        </button>
+      </form>
+    </div>
+  );
 };
 
 export default App;

@@ -80,7 +80,8 @@ input:focus {
 }
 
 button.delete-btn,
-button.add-btn {
+button.add-btn,
+.add-btn-1 {
   /* styling */
   height: 30px;
   width: 90px;
@@ -94,6 +95,11 @@ button.add-btn {
   /* margin-left: -15px; */
   padding: 5px 3px;
 }
+
+.add-btn-1 {
+  margin-top: 15px;
+}
+
 button:hover {
   background: #702fe0;
   color: white;
