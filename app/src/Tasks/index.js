@@ -11,7 +11,6 @@ const Tasks = () => {
   const [tasks, setTasks] = React.useState([]);
   const { loading, apiClient } = useApi();
 
-  // comment
   // load tasks when page loads (works when you put it inside useEffect hook)
   const loadTasks = React.useCallback(
     async () => setTasks(await apiClient.getTasks()),
