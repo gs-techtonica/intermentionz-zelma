@@ -34,7 +34,7 @@ const makeApi = (accessToken) => {
   // internal API feature
   // _fetch is a wrapper func that adds some custom functionality to fetch
   const _fetch = (url, options) => {
-    console.log("inside fetch", options);
+    // console.log("inside fetch", options);
     return fetch(url, {
       ...options,
       headers: {
