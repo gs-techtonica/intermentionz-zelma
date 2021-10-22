@@ -17,7 +17,7 @@ app.get("/api/ping", (request, response) =>
   response.json({ response: "pong" }),
 );
 
-console.log("process.env:" + process.env?.SERVE_REACT?.toLowerCase());
+// console.log("process.env:" + process.env?.SERVE_REACT?.toLowerCase());
 
 if (process.env?.SERVE_REACT?.toLowerCase() === "true") {
   app.use(

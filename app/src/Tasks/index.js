@@ -10,7 +10,7 @@ const Tasks = () => {
   // states & imports
   const [tasks, setTasks] = React.useState([]);
   const { loading, apiClient } = useApi();
-
+  // comment
   // load tasks when page loads (works when you put it inside useEffect hook)
   const loadTasks = React.useCallback(
     async () => setTasks(await apiClient.getTasks()),
@@ -48,7 +48,7 @@ const TaskList = ({ tasks, deleteTask }) => {
       <table className="center">
         {/* <thead> */}
         <tbody>
-          <th colspan="2">Affirmations</th>
+          <th colspan="2">Affirmations / Mentions</th>
           {tasks.map(({ id, name }) => (
             <tr key={id}>
               <td className="text-center">
