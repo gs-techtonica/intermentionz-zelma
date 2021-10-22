@@ -28,6 +28,7 @@
 .text-center {
   text-align: center;
   width: 300px;
+  column-width: 300px;
 }
 
 table {
@@ -49,10 +50,11 @@ thead {
   width: 300px;
 }
 
+// th = table header, td = table cell
 th,
 td {
   border: 1px solid black;
-  padding: 10px;
+  padding: 5px;
   // overflow: scroll
 }
 
