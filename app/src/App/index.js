@@ -163,63 +163,7 @@ const API = () => {
           Add
         </button>
       </form>
-      >>>>>>> API
     </div>
   );
 };
-
-const API = () => {
-  const [responseObj, setResponseObj] = React.useState({});
-  const [quote, setQuote] = React.useState("");
-  let [error, setError] = React.useState(false);
-  // fetch should be inside a useEffect so it doesn't get caught in an infinite loop when assigning response to 'setResponseObj' state
-  React.useEffect(() => {
-    fetch(
-      `https://quotes.rest/qod?language=en`,
-      // `https://api.openweathermap.org/data/2.5/weather?units=${unit}&q=${uriEncodedCity}&appid=81eaae9c9ea6f28f239fe73eebafd259`
-      // {
-      //   method: 'GET',
-      //   headers: {
-      //     'x-rapidapi-host': 'community-open-weather-map.p.rapidapi.com',
-      //     'x-rapidapi-key': `81eaae9c9ea6f28f239fe73eebafd259`,
-      //   },
-      // }
-    )
-      .then((response) => response.json())
-
-      .then((response) => {
-        console.log(response);
-        setResponseObj(response);
-        setQuote(response.contents.quotes[0].quote);
-        // console.log("response.status is " + response.status);
-        // 2nd version: 200 is a string
-        // // in this API, we had to use success to check if it passed or not
-        // if (!response.success) {
-        //   throw new Error();
-        // }
-
-        // console.log("this is the responseObj");
-        // takes take the json & saves json response as responseObj state
-        // setLoading(false);
-      });
-  }, []);
-  console.log("quotes are", quote);
-
-  // .catch((err) => {
-  //   setError(true);
-  //   // setLoading(false);
-  //   console.log("error");
-  // });
-
-  return <div className="quote-wrapper">{quote}</div>;
-};
-
 export default App;
-
-// {
-//   method: 'GET',
-//   headers: {
-//     'x-rapidapi-host': 'community-open-weather-map.p.rapidapi.com',
-//     'x-rapidapi-key': `81eaae9c9ea6f28f239fe73eebafd259`,
-//   },
-// }
