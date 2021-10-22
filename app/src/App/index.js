@@ -105,12 +105,9 @@ const API = () => {
 
   const canAdd = task !== "";
 
-  const onSubmit = (e) => {
-    e.preventDefault();
-    if (canAdd) {
-      addTask(task);
-      setTask("");
-    }
+  const handleChange = () => {
+    setTask(quote);
+    addTask(task);
   };
 
   // fetch should be inside a useEffect so it doesn't get caught in an infinite loop when assigning response to 'setResponseObj' state
@@ -157,12 +154,12 @@ const API = () => {
   return (
     <div className="quote-wrapper">
       <h2 className="quote-header">Quote of the Day</h2>
-      <form {...{ onSubmit }}>
+      <form>
         <p className="quote-p">
           "{quote}" - {author}
         </p>
 
-        <button className="add-btn-1" disabled={!canAdd}>
+        <button onClick={handleChange} className="add-btn-1" disabled={!canAdd}>
           Add
         </button>
       </form>
