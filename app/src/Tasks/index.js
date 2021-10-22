@@ -48,7 +48,7 @@ const TaskList = ({ tasks, deleteTask }) => {
       <table className="center">
         {/* <thead> */}
         <tbody>
-          <th colspan="2">Affirmations</th>
+          <th colspan="2">Affirmations / Mentions</th>
           {tasks.map(({ id, name }) => (
             <tr key={id}>
               <td className="text-center">

@@ -102,6 +102,9 @@ button.login:hover {
 
 .quote-wrapper {
   text-align: center;
+  max-width: 900px;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .quote-header {
@@ -128,9 +131,21 @@ button.login:hover {
     padding-top: 180px;
     font-size: 4.2rem;
   }
+
+  .quote-wrapper {
+    max-width: 700px;
+  }
 }
 
 @media screen and (max-width: 700px) {
+  .dashboard-wrapper {
+    background: url("../1_components/images/serene.jpg") no-repeat center center
+      fixed;
+    background-size: cover;
+    height: 112.5vh;
+    margin-top: -130px;
+  }
+
   .hero-text {
     font-size: 4rem;
     font-weight: 600;
@@ -144,5 +159,9 @@ button.login:hover {
 
   input.user-input {
     width: 275px;
+  }
+
+  .quote-wrapper {
+    max-width: 500px;
   }
 }

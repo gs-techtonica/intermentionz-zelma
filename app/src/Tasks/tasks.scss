@@ -71,7 +71,7 @@ label {
 }
 
 input {
-  width: 300px;
+  width: 375px;
   padding: 7px;
   text-align: center;
   border-radius: 6px;
@@ -98,6 +98,10 @@ button.add-btn,
   padding: 5px 3px;
 }
 
+.add-btn {
+  // can't get it to center
+}
+
 .add-btn-1 {
   margin-top: 15px;
 }
@@ -110,4 +114,10 @@ button:hover {
 
 .add-btn {
   text-align: center; // ?
+}
+
+@media screen and (max-width: 700px) {
+  .add-btn-1 {
+    margin-bottom: 15px;
+  }
 }

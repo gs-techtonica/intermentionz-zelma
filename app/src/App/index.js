@@ -90,11 +90,13 @@ const Dashboard = (addTask) => {
 const API = () => {
   const { apiClient } = useApi();
 
-  const [tasks, setTasks] = React.useState([]);
-  const [task, setTask] = React.useState("");
   const [responseObj, setResponseObj] = React.useState({});
   const [quote, setQuote] = React.useState("");
+  const [author, setAuthor] = React.useState("");
 
+  // add new Affirmation/task
+  const [tasks, setTasks] = React.useState([]);
+  const [task, setTask] = React.useState("");
   const loadTasks = React.useCallback(
     async () => setTasks(await apiClient.getTasks()),
     [apiClient],
@@ -130,6 +132,7 @@ const API = () => {
         console.log(response);
         setResponseObj(response);
         setQuote(response.contents.quotes[0].quote);
+        setAuthor(response.contents.quotes[0].author);
         // console.log("response.status is " + response.status);
         // 2nd version: 200 is a string
         // // in this API, we had to use success to check if it passed or not
@@ -155,7 +158,9 @@ const API = () => {
     <div className="quote-wrapper">
       <h2 className="quote-header">Quote of the Day</h2>
       <form {...{ onSubmit }}>
-        <p className="quote-p">"{quote}"</p>
+        <p className="quote-p">
+          "{quote}" - {author}
+        </p>
 
         <button className="add-btn-1" disabled={!canAdd}>
           Add
