@@ -46,11 +46,12 @@ const Tasks = () => {
 // TaskList component
 const TaskList = ({ tasks, deleteTask }) => {
   return (
-    <div>
+    <div className="table-wrapper">
+      <h1 className="table-header">Your Mentions / Reminders</h1>
       <table className="center">
         {/* <thead> */}
         <tbody>
-          <th colspan="2">Affirmations / Mentions</th>
+          {/* <th colspan="2">Affirmations / Mentions</th> */}
           {tasks.map(({ id, name }) => (
             <tr key={id}>
               <td className="text-center">
