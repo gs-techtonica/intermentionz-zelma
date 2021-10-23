@@ -31,13 +31,21 @@
   column-width: 300px;
 }
 
+.table-p {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  text-align: center;
+  color: #f5f5f5;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
 table {
   margin-top: 30px;
   border-collapse: collapse;
   overflow-y: scroll !important;
   display: block;
   width: 400px;
-  height: 300px !important;
+  height: 275px !important;
 }
 
 tbody {
@@ -61,18 +69,22 @@ td {
   column-width: 50px;
 }
 
+.delete-btn {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 label {
-  margin-top: 15px;
   margin-bottom: -15px;
   // aligns center
   text-align: center;
   display: block;
 }
 
-input {
+textarea {
   width: 375px;
   padding: 7px;
-  text-align: center;
+
   border-radius: 6px;
   border: none;
 }

@@ -159,9 +159,13 @@ const API = () => {
           "{quote}" - {author}
         </p>
 
-        <button onClick={handleChange} className="add-btn-1" disabled={!canAdd}>
+        {/* <button onClick={handleChange} className="add-btn-1" disabled={!canAdd}>
           Add
-        </button>
+        </button> */}
+        <p className="add-p">
+          If you like this quote, feel free to copy & paste into Affirmations
+          Field above
+        </p>
       </form>
     </div>
   );

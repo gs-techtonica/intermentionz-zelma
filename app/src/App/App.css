@@ -96,7 +96,7 @@ button.login:hover {
   background: url("../1_components/images/serene.jpg") no-repeat center center
     fixed;
   background-size: cover;
-  height: 107.5vh;
+  height: 107.3vh;
   margin-top: -130px;
 }
 
@@ -108,16 +108,26 @@ button.login:hover {
 }
 
 .quote-header {
-  margin-top: 15px;
+  font-size: 20px;
+  margin-top: 10px;
   text-align: center;
   color: white;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
 }
 
 .quote-p {
+  font-size: 16px;
+  margin-top: 10px;
+  color: white;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.add-p {
   margin-top: 15px;
   color: white;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+  font-weight: 100;
+  font-style: italic;
 }
 
 @media screen and (max-width: 1030px) {

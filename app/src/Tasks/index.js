@@ -55,8 +55,10 @@ const TaskList = ({ tasks, deleteTask }) => {
                 {/* <input type="checkbox" id="delete" /> */}
                 {name}
               </td>
+
               <td className="delete-column">
                 {/* you have access to id from tasks */}
+
                 <button className="delete-btn" onClick={() => deleteTask(id)}>
                   Delete
                 </button>
@@ -86,9 +88,11 @@ const AddTask = ({ addTask }) => {
 
   return (
     <div className="center">
+      <p className="table-p">Scroll down in table to view more Mentions</p>
+
       <form {...{ onSubmit }}>
         <label>
-          <input
+          <textarea
             onChange={(e) => setTask(e.currentTarget.value)}
             value={task}
             placeholder="Enter Affirmation/Mention"
