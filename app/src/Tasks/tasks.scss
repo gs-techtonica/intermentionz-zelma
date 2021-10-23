@@ -17,7 +17,12 @@
 .affirmation-wrapper {
   // pushes table down
   padding-top: 150px;
-  max-width: 400px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.add-div {
+  width: 500px;
   margin: 0 auto;
 }
 
@@ -27,11 +32,14 @@
 
 .text-center {
   text-align: center;
-  width: 300px;
+  width: 500px;
   column-width: 300px;
+  color: white;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 .table-p {
+  font-size: 14px;
   margin-top: 15px;
   margin-bottom: 15px;
   text-align: center;
@@ -44,7 +52,7 @@ table {
   border-collapse: collapse;
   overflow-y: scroll !important;
   display: block;
-  width: 400px;
+  width: 600px;
   height: 275px !important;
 }
 
@@ -54,14 +62,16 @@ tbody {
 
 // commented out
 thead {
-  width: 300px;
+  width: 400px;
 }
 
 // th = table header, td = table cell
 th,
 td {
-  border: 1px solid black;
+  border: 1px solid #454545;
   padding: 5px;
+  color: white;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
   // overflow: scroll
 }
 
@@ -82,7 +92,7 @@ label {
 }
 
 textarea {
-  width: 375px;
+  width: 500px;
   padding: 7px;
 
   border-radius: 6px;
@@ -111,6 +121,7 @@ button.add-btn,
 
 .add-btn {
   // can't get it to center
+  text-align: center;
 }
 
 .add-btn-1 {

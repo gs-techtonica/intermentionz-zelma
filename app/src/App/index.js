@@ -163,7 +163,7 @@ const API = () => {
           Add
         </button> */}
         <p className="add-p">
-          If you like this quote, feel free to copy & paste into Affirmations
+          * If you like this quote, feel free to copy & paste into Affirmations
           Field above
         </p>
       </form>

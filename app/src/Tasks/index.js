@@ -35,7 +35,9 @@ const Tasks = () => {
         {/* creating obj w/ 2 attributes - tasks & deleteTasks (you could do "tasks: taskState" tasks(L) = name, tasks(R) is the value) */}
         {/* 'object shorthand syntax' */}
         <TaskList {...{ tasks, deleteTask }} />
-        <AddTask {...{ addTask }} />
+        <div className="add-div">
+          <AddTask {...{ addTask }} />
+        </div>
       </div>
     </section>
   );
@@ -88,7 +90,7 @@ const AddTask = ({ addTask }) => {
 
   return (
     <div className="center">
-      <p className="table-p">Scroll down in table to view more Mentions</p>
+      <p className="table-p">* Scroll down in table to view more Mentions</p>
 
       <form {...{ onSubmit }}>
         <label>
