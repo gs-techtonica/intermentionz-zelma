@@ -34,6 +34,7 @@ const App = () => {
             path="/dashboard"
             element={<Protected component={Dashboard} />}
           />
+          <Route path="/about" element={<Protected component={About} />} />
         </Routes>
       </main>
     </>
@@ -167,6 +168,24 @@ const API = () => {
           Field above
         </p>
       </form>
+    </div>
+  );
+};
+
+const About = () => {
+  return (
+    <div className="about-wrapper">
+      <div className="about-text-wrapper">
+        <AboutText />
+      </div>
+    </div>
+  );
+};
+
+const AboutText = () => {
+  return (
+    <div className="table-wrapper">
+      <p className="about-p">Hi there</p>
     </div>
   );
 };
