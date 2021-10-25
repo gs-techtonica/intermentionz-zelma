@@ -48,7 +48,8 @@ const TaskList = ({ tasks, deleteTask }) => {
   return (
     <div>
       <p className="select-text">
-        * If you would like to opt into email reminders please select ONE quote
+        * If you would like to opt into text message reminders please select ONE
+        quote
       </p>
       <div className="table-wrapper">
         <h1 className="table-header">Your Mentions / Reminders</h1>

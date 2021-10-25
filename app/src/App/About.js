@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 import CBT from "../1_components/images/CBT.jpeg";
 
