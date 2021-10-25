@@ -46,32 +46,38 @@ const Tasks = () => {
 // TaskList component
 const TaskList = ({ tasks, deleteTask }) => {
   return (
-    <div className="table-wrapper">
-      <h1 className="table-header">Your Mentions / Reminders</h1>
-      <table className="center">
-        {/* <thead> */}
-        <tbody>
-          {/* <th colspan="2">Affirmations / Mentions</th> */}
-          {tasks.map(({ id, name }) => (
-            <tr key={id}>
-              <td className="text-center">
-                {/* <input type="checkbox" id="delete" /> */}
-                {name}
-              </td>
+    <div>
+      <p className="select-text">
+        * If you would like to opt into email reminders please select ONE quote
+      </p>
+      <div className="table-wrapper">
+        <h1 className="table-header">Your Mentions / Reminders</h1>
+        <table className="center">
+          {/* <thead> */}
+          <tbody>
+            {/* <th colspan="2">Affirmations / Mentions</th> */}
+            {tasks.map(({ id, name }) => (
+              <tr key={id}>
+                <td className="text-center">
+                  <input type="checkbox" className="checkbox" />
+                  {/* <input type="checkbox" id="delete" /> */}
+                  {name}
+                </td>
 
-              <td className="delete-column">
-                {/* you have access to id from tasks */}
+                <td className="delete-column">
+                  {/* you have access to id from tasks */}
 
-                <button className="delete-btn" onClick={() => deleteTask(id)}>
-                  Delete
-                </button>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-        {/* </thead> */}
-      </table>
-      {/* when you click 'delete' is deletes task*/}
+                  <button className="delete-btn" onClick={() => deleteTask(id)}>
+                    Delete
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+          {/* </thead> */}
+        </table>
+        {/* when you click 'delete' is deletes task*/}
+      </div>
     </div>
   );
 };

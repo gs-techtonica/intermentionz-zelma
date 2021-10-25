@@ -11,3 +11,6 @@ create table affirmations(
 ); 
 
 INSERT INTO affirmations(id, aff_text) VALUES (2, 'You are nice');
+
+-- adding a is_default column to tasks 
+ALTER TABLE tasks ADD COLUMN "is_default" BOOLEAN DEFAULT FALSE;

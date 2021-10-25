@@ -100,6 +100,41 @@ button.login:hover {
   margin-top: -130px;
 }
 
+.about-wrapper {
+  background: url("../1_components/images/serene.jpg") no-repeat center center
+    fixed;
+  background-size: cover;
+  height: 120vh;
+}
+
+.about-text-wrapper {
+  margin-top: -130px;
+  padding-top: 150px;
+}
+
+.about-text {
+  /* pushes entire section down */
+  max-width: 900px;
+  margin: 0 auto;
+  opacity: 0.9;
+
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  /* pushes section down, but allows image to still be up */
+}
+
+.about-p {
+  line-height: 25px;
+  color: #474747;
+}
+
+/* div that centers image */
+.about-img {
+  text-align: center;
+  margin-top: -10px;
+}
+
 .quote-wrapper {
   text-align: center;
   max-width: 900px;

@@ -1,5 +1,7 @@
 /* BUGS - Hover Effect not working: line 85 */
-
+a {
+  cursor: pointer;
+}
 /* PARENT1: <nav> that holds entire navbar menu */
 .navbar {
   /* display: flex - this will float everything on the same line, including navbar-top*/
@@ -124,6 +126,7 @@
   font-weight: 300;
   height: 100%;
   color: #431195;
+  cursor: pointer;
 }
 
 /* hover effect - border bottom & lifting effect when hovering */
