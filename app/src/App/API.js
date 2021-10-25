@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 import useApi from "../auth/useApi";
 
 const API = () => {
+  const [otherQuote, setOtherQuote] = React.useState({});
   const { apiClient } = useApi();
 
   const [responseObj, setResponseObj] = React.useState({});
@@ -25,8 +26,17 @@ const API = () => {
     addTask(task);
   };
 
+  // 2nd API
+  const loadQuote = async () => {
+    // setOtherQuote(await apiClient.getQuote());
+  };
+
   // fetch should be inside a useEffect so it doesn't get caught in an infinite loop when assigning response to 'setResponseObj' state
   useEffect(() => {
+    // 2nd API
+    loadQuote();
+    console.log(otherQuote);
+
     fetch(
       `https://quotes.rest/qod?language=en`,
       // `https://api.openweathermap.org/data/2.5/weather?units=${unit}&q=${uriEncodedCity}&appid=81eaae9c9ea6f28f239fe73eebafd259`
