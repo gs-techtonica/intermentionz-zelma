@@ -6,7 +6,7 @@ import fetch from "node-fetch";
 
 const router = express.Router();
 
-router.get("/quote", async (request, response) =>
+router.get("/", async (request, response) =>
   response.json(await fetch("https://www.affirmations.dev/")),
 );
 
