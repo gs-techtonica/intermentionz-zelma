@@ -104,27 +104,35 @@ button.login:hover {
   background: url("../1_components/images/serene.jpg") no-repeat center center
     fixed;
   background-size: cover;
-  height: 113vh;
-  margin-top: -130px;
+  height: 120vh;
 }
 
 .about-text-wrapper {
-  /* pushes entire section down */
+  margin-top: -130px;
   padding-top: 150px;
-  max-width: 900px;
-  margin: 0 auto;
 }
 
-.table-wrapper {
+.about-text {
+  /* pushes entire section down */
+  max-width: 900px;
+  margin: 0 auto;
+  opacity: 0.9;
+
   background: white;
   padding: 20px;
   border-radius: 10px;
-  opacity: 0.7;
+  /* pushes section down, but allows image to still be up */
 }
 
 .about-p {
-  /* pushes section down, but allows image to still be up */
-  margin: 30px;
+  line-height: 25px;
+  color: #474747;
+}
+
+/* div that centers image */
+.about-img {
+  text-align: center;
+  margin-top: -10px;
 }
 
 .quote-wrapper {
