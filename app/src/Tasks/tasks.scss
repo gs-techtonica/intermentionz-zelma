@@ -26,15 +26,25 @@
   margin: 0 auto;
 }
 
+.select-text {
+  color: white;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  font-size: 18px;
+}
+
 .table-wrapper {
   background: white;
-  margin-top: -15px;
+  margin-top: 10px;
   padding: 20px;
   border-radius: 10px;
   opacity: 0.7;
 }
 .center {
   margin: 0 auto;
+}
+
+.checkbox {
+  float: left;
 }
 
 .text-center {
