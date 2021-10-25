@@ -178,7 +178,16 @@ button.login:hover {
     font-size: 4.2rem;
   }
 
+  .about-wrapper {
+    height: 125vh;
+  }
+
   .quote-wrapper {
+    max-width: 700px;
+  }
+
+  .about-text {
+    /* pushes entire section down */
     max-width: 700px;
   }
 }
@@ -190,6 +199,19 @@ button.login:hover {
     background-size: cover;
     height: 112.5vh;
     margin-top: -130px;
+  }
+
+  .about-wrapper {
+    height: 140vh;
+  }
+  .about-text {
+    /* pushes entire section down */
+    max-width: 500px;
+  }
+
+  img {
+    margin-top: 5px;
+    height: 260px;
   }
 
   .hero-text {
@@ -209,5 +231,21 @@ button.login:hover {
 
   .quote-wrapper {
     max-width: 500px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .about-wrapper {
+    height: 150vh;
+  }
+
+  .about-text {
+    /* pushes entire section down */
+    max-width: 300px;
+  }
+
+  img {
+    margin-top: 5px;
+    height: 160px;
   }
 }
