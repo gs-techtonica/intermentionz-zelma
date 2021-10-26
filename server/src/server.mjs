@@ -1,5 +1,7 @@
+import dotenv from "dotenv";
 import express from "express";
 import mime from "mime-types";
+import twilio from "twilio";
 
 // import affirmationsRouter from "./affirmationsRouter.mjs";
 import jwtCheck from "./jwtCheck.mjs";
@@ -9,6 +11,23 @@ import taskRouter from "./taskRouter.mjs";
 import userRouter from "./userRouter.mjs";
 
 const app = express();
+
+// Twilio
+dotenv.config();
+
+const accountSid = process.env.TWILIO_ACCOUNT_SID;
+const authToken = process.env.TWILIO_AUTH_TOKEN;
+let client = twilio(accountSid, authToken);
+
+// const phone = await db.getPhone(request.user.sub);
+// response.json(tasks);
+
+client.messages.create({
+  body: "Howdy!",
+  from: "+12178852760",
+  to: "+12246027354",
+});
+// .then(message => console.log(message.sid));
 
 // app.use("/api/affirmations", jwtCheck, affirmationsRouter);
 app.use("/api/tasks", jwtCheck, taskRouter);
