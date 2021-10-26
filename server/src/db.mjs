@@ -6,16 +6,17 @@ import pgp from "pg-promise";
 
 const db = initDb();
 
-// get the user's phone #
-export const getPhone = (sub) =>
-  db.one(`SELECT phone from users WHERE sub=$<sub>`, { sub });
-
 // gets tasks based off sub?
 export const getTasks = (sub) =>
   db.any(
     "SELECT tasks.* FROM tasks LEFT JOIN users on user_id=users.id WHERE sub=$<sub>",
     { sub },
   );
+
+// MUST GO AFTER GETTASKS
+// get the user's phone #
+export const getPhone = (sub) =>
+  db.one(`SELECT phone from users WHERE sub=$<sub>`, { sub });
 
 // adds tasks using sub & name
 export const addTask = (sub, name) =>

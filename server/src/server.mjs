@@ -6,7 +6,6 @@ import jwtCheck from "./jwtCheck.mjs";
 // 2nd API
 import quoteRouter from "./quoteRouter.mjs";
 import taskRouter from "./taskRouter.mjs";
-import twilioRouter from "./twilioRouter.mjs";
 import userRouter from "./userRouter.mjs";
 
 const app = express();
@@ -16,7 +15,6 @@ app.use("/api/tasks", jwtCheck, taskRouter);
 app.use("/api/users", jwtCheck, userRouter);
 // 2nd API
 app.use("/api/quote", jwtCheck, quoteRouter);
-app.use("/api/twilio", jwtCheck, twilioRouter);
 
 // Do not comment out or delete this end point. The React development server won't start until it pings this end point successfully.
 app.get("/api/ping", (request, response) =>
