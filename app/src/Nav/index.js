@@ -65,8 +65,13 @@ const Nav = () => {
             {/* End Smooth Scroll Section */}
           </li>
           <Auth />
-          <div className="profile">
-            <i class="fas fa-user"></i>
+          <div className="dropdown">
+            <i className="fas fa-user dropbtn"></i>
+            <div class="dropdown-content">
+              <Logout />
+              <a href="/">Link 2</a>
+              <a href="/">Link 3</a>
+            </div>
           </div>
         </ul>
       </div>
@@ -80,8 +85,7 @@ const Auth = () => {
   // when user is logged in, Logout shows; and vice versa
   return isAuthenticated ? (
     <>
-      <div log-btn>
-        {/*className="auth-logout"*/}
+      <div log-btn className="auth-logout">
         {/* <p className="greetings">Hey, {user.given_name}!</p> */}
         <Logout />
       </div>
