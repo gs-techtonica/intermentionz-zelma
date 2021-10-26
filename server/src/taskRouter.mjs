@@ -9,6 +9,7 @@ const router = express.Router();
 router.get("/", async (request, response) => {
   const tasks = await db.getTasks(request.user.sub);
   response.json(tasks);
+  console.log(response.json());
 });
 // adds new tasks
 router.use(express.json());

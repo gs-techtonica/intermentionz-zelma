@@ -13,7 +13,7 @@ const makeApi = (accessToken) => {
     addAffirmations: (name) => _post("/api/affirmations"),
     addOrUpdateUser: (user) => _post("/api/users", { user }),
     // 2nd atttempt at api
-    getQuote: () => _get("/quote"),
+    getQuote: () => _get("/api/quote"),
   };
 
   const _get = async (url) => (await _fetch(url)).json();
