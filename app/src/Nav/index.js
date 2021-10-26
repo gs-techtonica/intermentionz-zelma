@@ -65,14 +65,14 @@ const Nav = () => {
             {/* End Smooth Scroll Section */}
           </li>
           <Auth />
-          <div className="dropdown">
+          {/* <div className="dropdown">
             <i className="fas fa-user dropbtn"></i>
             <div class="dropdown-content">
-              <Logout />
               <a href="/">Link 2</a>
               <a href="/">Link 3</a>
+              <Logout />
             </div>
-          </div>
+          </div> */}
         </ul>
       </div>
     </nav>

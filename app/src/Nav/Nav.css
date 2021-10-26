@@ -197,6 +197,7 @@ button:hover {
 /* dropdown content */
 .dropdown-content {
   margin-top: -30px;
+  margin-left: -40px;
   display: none;
   position: absolute;
   background-color: transparent;
@@ -220,19 +221,19 @@ button:hover {
 
 /* links inside dropdown */
 
-.auth-logout {
+/* .auth-logout {
   display: none;
-}
+} */
 
 /* mobile menu? */
 @media screen and (max-width: 900px) {
-  .auth-logout {
+  /* .auth-logout {
     display: block;
   }
 
   .dropdown {
     display: none;
-  }
+  } */
 
   .navbar {
     display: flex;
