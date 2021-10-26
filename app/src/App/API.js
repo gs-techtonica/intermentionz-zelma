@@ -27,14 +27,16 @@ const API = () => {
   };
 
   // 2nd API
-  const loadQuote = async () => {
+  const loadQuote = React
+    .useCallback
     // async () => setOtherQuote(await apiClient.getQuote()),
     // [apiClient],
-  };
+    ();
+
   // fetch should be inside a useEffect so it doesn't get caught in an infinite loop when assigning response to 'setResponseObj' state
   useEffect(() => {
     // 2nd API
-    loadQuote();
+    // loadQuote();
     console.log(otherQuote);
 
     fetch(

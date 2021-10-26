@@ -6,14 +6,9 @@ import fetch from "node-fetch";
 
 const router = express.Router();
 
-router.get("/", async (request, response) =>
-  response.json(await fetch("https://www.affirmations.dev/")),
-);
-
-// router.use(express.json());
-// router.post("/", async (request, response) => {
-//   const user = await db.addOrUpdateUser(request.body.user);
-//   response.status(201).json(user);
-// });
+router.get("/", async (request, response) => {
+  response.json(await fetch("https://www.affirmations.dev/"));
+  console.log(response);
+});
 
 export default router;
