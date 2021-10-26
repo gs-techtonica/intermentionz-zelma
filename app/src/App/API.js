@@ -4,8 +4,8 @@ import useApi from "../auth/useApi";
 
 const API = () => {
   const [otherQuote, setOtherQuote] = React.useState({});
-  const { apiClient } = useApi();
 
+  const { apiClient } = useApi();
   const [responseObj, setResponseObj] = React.useState({});
   const [quote, setQuote] = React.useState("");
   const [author, setAuthor] = React.useState("");
@@ -28,9 +28,9 @@ const API = () => {
 
   // 2nd API
   const loadQuote = async () => {
-    // setOtherQuote(await apiClient.getQuote());
+    // async () => setOtherQuote(await apiClient.getQuote()),
+    // [apiClient],
   };
-
   // fetch should be inside a useEffect so it doesn't get caught in an infinite loop when assigning response to 'setResponseObj' state
   useEffect(() => {
     // 2nd API
