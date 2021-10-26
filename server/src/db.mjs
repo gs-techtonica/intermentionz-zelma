@@ -6,6 +6,10 @@ import pgp from "pg-promise";
 
 const db = initDb();
 
+// get the user's phone #
+export const getPhone = (sub) =>
+  db.one(`SELECT phone from users WHERE sub=$<sub>`, { sub });
+
 // gets tasks based off sub?
 export const getTasks = (sub) =>
   db.any(
