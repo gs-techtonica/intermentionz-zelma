@@ -178,23 +178,30 @@ button:hover {
 .dropdown {
   position: relative;
   display: inline-block;
+  cursor: pointer;
 }
 /* hover button / icon */
 .dropbtn {
-  background-color: white;
+  margin-left: -20px;
+  margin-top: 20px;
+  background-color: transparent;
   color: #411195;
   padding: 16px;
-  font-size: 16px;
+  font-size: 20px;
   border: none;
+}
+.dropbtn:hover {
+  opacity: 0.8;
 }
 
 /* dropdown content */
 .dropdown-content {
+  margin-top: -30px;
   display: none;
   position: absolute;
-  background-color: #f1f1f1;
+  background-color: transparent;
   min-width: 60px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); */
   z-index: 1;
 }
 
@@ -208,6 +215,7 @@ button:hover {
   padding: 12px 16px;
   text-decoration: none;
   display: block;
+  font-size: 20px;
 }
 
 /* links inside dropdown */
