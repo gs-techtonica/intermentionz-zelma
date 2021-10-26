@@ -175,8 +175,24 @@ button:hover {
   cursor: pointer;
 }
 
+.profile {
+  display: block;
+}
+
+.auth-logout {
+  display: none;
+}
+
 /* mobile menu? */
 @media screen and (max-width: 900px) {
+  .auth-logout {
+    display: block;
+  }
+
+  .profile {
+    display: none;
+  }
+
   .navbar {
     display: flex;
     height: 80px;

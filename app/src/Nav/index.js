@@ -65,6 +65,9 @@ const Nav = () => {
             {/* End Smooth Scroll Section */}
           </li>
           <Auth />
+          <div className="profile">
+            <i class="fas fa-user"></i>
+          </div>
         </ul>
       </div>
     </nav>
@@ -78,13 +81,14 @@ const Auth = () => {
   return isAuthenticated ? (
     <>
       <div log-btn>
+        {/*className="auth-logout"*/}
         {/* <p className="greetings">Hey, {user.given_name}!</p> */}
         <Logout />
       </div>
     </>
   ) : (
     <div log-btn>
-      <Login />
+      <Login className="auth-login" />
     </div>
   );
 };
