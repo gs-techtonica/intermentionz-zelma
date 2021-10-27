@@ -190,6 +190,22 @@ button.delete-btn {
   margin-top: 5px;
 }
 
+.default-btn {
+  /* styling */
+  height: 30px;
+  width: 150px;
+  background-color: #411195;
+  border: 1px solid #411195;
+  border-radius: 25px;
+  color: white;
+  font-weight: 300;
+  font-size: 1.1rem;
+  cursor: pointer;
+  /* margin-left: -15px; */
+  padding: 5px 3px;
+  margin-top: 5px;
+}
+
 button:hover {
   background: #702fe0;
   color: white;

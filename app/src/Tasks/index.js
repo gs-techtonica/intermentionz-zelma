@@ -64,7 +64,8 @@ const TaskList = ({ tasks, deleteTask }) => {
             {tasks.map(({ id, name }) => (
               <tr key={id}>
                 <td className="text-center">
-                  <input type="checkbox" className="checkbox" />
+                  {/* by giving the radio buttons the same name, you can only check one at a time */}
+                  <input type="radio" name="default" className="checkbox" />
                   {/* <input type="checkbox" id="delete" /> */}
                   {name}
                 </td>
@@ -82,6 +83,7 @@ const TaskList = ({ tasks, deleteTask }) => {
           {/* </thead> */}
         </table>
         {/* when you click 'delete' is deletes task*/}
+        <button className="default-btn">Set as Default</button>
       </div>
       <button className="add-phone">Get SMS</button>
     </div>
