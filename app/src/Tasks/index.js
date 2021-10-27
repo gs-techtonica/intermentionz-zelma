@@ -47,10 +47,14 @@ const Tasks = () => {
 const TaskList = ({ tasks, deleteTask }) => {
   return (
     <div>
-      <p className="select-text">
-        *Want to receive an SMS with your favorite Mention? Select ONE quote &
-        'Get SMS'
-      </p>
+      <div className="select-div">
+        <p className="select-text">
+          *Want to receive SMS texts with your favorite Mention?
+        </p>
+        <p className="select-text-2">
+          Select one Mention below & click 'Get SMS'
+        </p>
+      </div>
       <div className="table-wrapper">
         <h1 className="table-header">Your Mentions / Reminders</h1>
         <table className="center">
@@ -79,6 +83,7 @@ const TaskList = ({ tasks, deleteTask }) => {
         </table>
         {/* when you click 'delete' is deletes task*/}
       </div>
+      <button className="add-phone">Get SMS</button>
     </div>
   );
 };

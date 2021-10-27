@@ -21,6 +21,15 @@ router.post("/", async (request, response) => {
   // console.log("inside add func");
 });
 
+router.patch("/:taskId", async (request, response) => {
+  const taskId = parseInt(request.params.taskId);
+  console.log("request", request.body);
+  const task = await db.updateTask(taskId, {
+    is_default: request.body.is_default,
+  });
+  response.status(200).json(task);
+});
+
 // delete method
 router.delete("/:deleteId", async (request, response) => {
   console.log("inside delete");

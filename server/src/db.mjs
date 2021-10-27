@@ -13,11 +13,6 @@ export const getTasks = (sub) =>
     { sub },
   );
 
-// MUST GO AFTER GETTASKS
-// get the user's phone #
-export const getPhone = (sub) =>
-  db.one(`SELECT phone from users WHERE sub=$<sub>`, { sub });
-
 // adds tasks using sub & name
 export const addTask = (sub, name) =>
   db.one(
@@ -29,6 +24,25 @@ export const addTask = (sub, name) =>
 // correct syntax? should I be returning after?
 export const deleteTask = (id) =>
   db.one("DELETE FROM tasks WHERE id=$<id> RETURNING *", { id });
+
+// updateTask takes two parameters, id & object
+// toggle is_default from false to true
+export const updateTask = (id, task) =>
+  db.one(
+    `UPDATE tasks SET is_default=$<is_default> WHERE id=$<id> RETURNING *`,
+    {
+      id,
+      is_default: task.is_default,
+    },
+  );
+// true & false will come from front-end
+// another DB query that will update (where clause where user is the same user as the task you specified, and the id is NOT id you specified && is_dfault = true; <- set those to false)
+// id != $<id>
+
+// MUST GO AFTER GETTASKS
+// get the user's phone #
+export const getPhone = (sub) =>
+  db.one(`SELECT phone from users WHERE sub=$<sub>`, { sub });
 
 // adds a user to the database
 export const addOrUpdateUser = (user) =>
