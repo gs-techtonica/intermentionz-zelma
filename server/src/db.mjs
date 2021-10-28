@@ -27,16 +27,23 @@ export const deleteTask = (id) =>
 
 // updateTask takes two parameters, id & object
 // toggle is_default from false to true
-export const updateTask = async (id, task) => {
-  await db.one(
-    `UPDATE tasks SET is_default=$<is_default> WHERE id=$<id> RETURNING *`,
-    {
-      id,
-      is_default: task.is_default,
-      // set the db value to whatever is specified in front
-    },
-  );
-  db.one();
+export const updateIsDefault = (id, sub) => {
+  db.tx((t) => {
+    // 1st func - sets everything to false
+    const q1 = t.none(`UPDATE tasks SET is_default=false WHERE sub=$<sub>`, {
+      sub,
+    });
+    // 2nd func/query - sets is_default to true & id
+    const q2 = t.one(
+      `UPDATE tasks SET is_default=true WHERE id=$<id> RETURNING *`,
+      {
+        id,
+      },
+    );
+
+    // returning a promise that determines a successful tx
+    return t.batch([q1, q2]);
+  });
 };
 // true & false will come from front-end
 // another DB query that will update (use where clause where user is the same user as the task you specified, and the id is NOT id you specified && is_dfault = true; <- set those to false)
