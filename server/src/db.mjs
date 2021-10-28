@@ -47,6 +47,16 @@ export const updateTask = async (id, task) => {
 export const getPhone = (sub) =>
   db.one(`SELECT phone from users WHERE sub=$<sub>`, { sub });
 
+// // add phone
+// // adds tasks using sub & name
+// export const addTask = (sub, phone) =>
+//   db.one(
+//     `INSERT INTO tasks(user_id, name)
+//       VALUES((SELECT id FROM users WHERE sub=$<sub>), $<name>)
+//       RETURNING *`,
+//     { sub, phone },
+//   );
+
 // adds a user to the database
 export const addOrUpdateUser = (user) =>
   db.one(

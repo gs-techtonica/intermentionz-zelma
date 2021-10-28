@@ -13,6 +13,7 @@ const makeApi = (accessToken) => {
     updateTask: (id, task) => _post(`/api/tasks/${id}`, { task }),
     addAffirmations: (name) => _post("/api/affirmations"),
     addOrUpdateUser: (user) => _post("/api/users", { user }),
+    addPhone: (user) => _post("/api/users", { user }),
     // 2nd atttempt at api
     getQuote: () => _get("/api/quote"),
   };

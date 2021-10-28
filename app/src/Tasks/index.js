@@ -1,6 +1,9 @@
 // Tasks component
 import * as React from "react";
 
+import Popup from "reactjs-popup";
+import "reactjs-popup/dist/index.css";
+
 import useApi from "../auth/useApi";
 
 // had to change name of file to get it to work
@@ -46,6 +49,8 @@ const Tasks = () => {
 // TaskList component
 const TaskList = ({ tasks, deleteTask }) => {
   const [taskId, setTaskId] = React.useState();
+  const [phone, setPhone] = React.useState();
+  console.log(taskId);
   const { apiClient } = useApi();
 
   const updateTask = (id) => {
@@ -54,6 +59,12 @@ const TaskList = ({ tasks, deleteTask }) => {
       is_default: true,
     };
     apiClient.updateTask(id, updatedTask);
+  };
+
+  // handleSubmit
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    return fetch("");
   };
 
   return (
@@ -105,7 +116,24 @@ const TaskList = ({ tasks, deleteTask }) => {
           Set as Default
         </button>
       </div>
-      <button className="add-phone">Get SMS</button>
+
+      <Popup
+        className="pop"
+        trigger={<button className="get-sms">Get SMS</button>}
+        modal
+      >
+        <div className="popup">
+          <input
+            onChange={(e) => setPhone(e.target.value)}
+            className="phone-input"
+            placeholder="Enter phone number"
+          />
+
+          <button className="phone-btn" onClick={handleSubmit}>
+            Enter Phone
+          </button>
+        </div>
+      </Popup>
     </div>
   );
 };
