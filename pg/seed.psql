@@ -93,7 +93,6 @@ ALTER TABLE ONLY public.tasks ALTER COLUMN id SET DEFAULT nextval('public.tasks_
 --
 
 COPY public.tasks (id, name, user_id, is_default) FROM stdin;
-17	You're good enough	150	f
 18	You're smart enough	150	f
 19	Daggonit, people like you	150	f
 30	I'm good enough	263	f
@@ -102,6 +101,12 @@ COPY public.tasks (id, name, user_id, is_default) FROM stdin;
 43	I deserve love and happiness	2	f
 44	I am good enough 	2	f
 49	Daggonit, people like me	2	f
+50	I'm good enough	930	f
+51	I'm smart enough	930	f
+52	Daggonit, people like me	930	f
+17	You're good enough	150	t
+53	more	2	f
+56	more	2	f
 \.
 
 
@@ -112,8 +117,9 @@ COPY public.tasks (id, name, user_id, is_default) FROM stdin;
 COPY public.users (id, given_name, family_name, email, sub, phone, picture) FROM stdin;
 126		Zvsedano@gmail.com	zvsedano@gmail.com	github|55029831		https://avatars.githubusercontent.com/u/55029831?v=4
 263		Christina.ramon@gmail.com	christina.ramon@gmail.com	auth0|61708a64ff86f6006a3bacff		https://s.gravatar.com/avatar/a75332f56c0af142b89bb562b5d6492a?s=480&r=pg&d=https%3A%2F%2Fcdn.auth0.com%2Favatars%2Fch.png
-2	Zelma	Sedano	zvsedano@gmail.com	google-oauth2|102656422993994048685		https://lh3.googleusercontent.com/a-/AOh14GjQ1jSrAVjBr2CtOVTh4dwdD9QFM7tbGZDhLDIm0A=s96-c
+2	Zelma	Sedano	zvsedano@gmail.com	google-oauth2|102656422993994048685	+12246027354	https://lh3.googleusercontent.com/a-/AOh14GjQ1jSrAVjBr2CtOVTh4dwdD9QFM7tbGZDhLDIm0A=s96-c
 150	Valerie	Sedano	valerie829201@gmail.com	google-oauth2|108098657549437075565		https://lh3.googleusercontent.com/a/AATXAJwDh6for5QdOAK5bwhmSOLaqK_ZEZRRZ1uVAjjc=s96-c
+930	Valerie	Bono	valerie.bonichiwa@gmail.com	google-oauth2|116571077323243691691		https://lh3.googleusercontent.com/a/AATXAJz6BuiI4jt-p2OmgWY96Et5wDCFKLqDPcvsKi-s=s96-c
 \.
 
 
@@ -121,14 +127,14 @@ COPY public.users (id, given_name, family_name, email, sub, phone, picture) FROM
 -- Name: tasks_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.tasks_id_seq', 49, true);
+SELECT pg_catalog.setval('public.tasks_id_seq', 56, true);
 
 
 --
 -- Name: users_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.users_id_seq', 785, true);
+SELECT pg_catalog.setval('public.users_id_seq', 1045, true);
 
 
 --

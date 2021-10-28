@@ -88,7 +88,7 @@ table {
   overflow-y: scroll !important;
   display: block;
   width: 600px;
-  height: 275px !important;
+  height: 250px !important;
 }
 
 tbody {
@@ -203,7 +203,8 @@ button.delete-btn {
   cursor: pointer;
   /* margin-left: -15px; */
   padding: 5px 3px;
-  margin-top: 5px;
+  margin-top: 15px;
+  margin-bottom: -20px;
 }
 
 button:hover {

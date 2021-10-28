@@ -10,6 +10,7 @@ const makeApi = (accessToken) => {
     addTask: (name) => _post("/api/tasks", { name }),
     // you should specify a server header to have a bearer token
     deleteTask: (id) => _delete(`/api/tasks/${id}`, { id }),
+    updateTask: (id, task) => _post(`/api/tasks/${id}`, { task }),
     addAffirmations: (name) => _post("/api/affirmations"),
     addOrUpdateUser: (user) => _post("/api/users", { user }),
     // 2nd atttempt at api

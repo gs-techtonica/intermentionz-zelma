@@ -21,6 +21,7 @@ router.post("/", async (request, response) => {
   // console.log("inside add func");
 });
 
+// update task/ set default
 router.patch("/:taskId", async (request, response) => {
   const taskId = parseInt(request.params.taskId);
   console.log("request", request.body);

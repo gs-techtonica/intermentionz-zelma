@@ -27,16 +27,19 @@ export const deleteTask = (id) =>
 
 // updateTask takes two parameters, id & object
 // toggle is_default from false to true
-export const updateTask = (id, task) =>
-  db.one(
+export const updateTask = async (id, task) => {
+  await db.one(
     `UPDATE tasks SET is_default=$<is_default> WHERE id=$<id> RETURNING *`,
     {
       id,
       is_default: task.is_default,
+      // set the db value to whatever is specified in front
     },
   );
+  db.one();
+};
 // true & false will come from front-end
-// another DB query that will update (where clause where user is the same user as the task you specified, and the id is NOT id you specified && is_dfault = true; <- set those to false)
+// another DB query that will update (use where clause where user is the same user as the task you specified, and the id is NOT id you specified && is_dfault = true; <- set those to false)
 // id != $<id>
 
 // MUST GO AFTER GETTASKS

@@ -45,6 +45,17 @@ const Tasks = () => {
 
 // TaskList component
 const TaskList = ({ tasks, deleteTask }) => {
+  const [taskId, setTaskId] = React.useState();
+  const { apiClient } = useApi();
+
+  const updateTask = (id) => {
+    // making an object
+    const updatedTask = {
+      is_default: true,
+    };
+    apiClient.updateTask(id, updatedTask);
+  };
+
   return (
     <div>
       <div className="select-div">
@@ -65,7 +76,14 @@ const TaskList = ({ tasks, deleteTask }) => {
               <tr key={id}>
                 <td className="text-center">
                   {/* by giving the radio buttons the same name, you can only check one at a time */}
-                  <input type="radio" name="default" className="checkbox" />
+                  {/* I want to take the id & pass it into taskId state, so it can be used to set id of default */}
+                  <input
+                    type="radio"
+                    name="default"
+                    value={id}
+                    onChange={(e) => setTaskId(e.target.value)}
+                    className="checkbox"
+                  />
                   {/* <input type="checkbox" id="delete" /> */}
                   {name}
                 </td>
@@ -83,7 +101,9 @@ const TaskList = ({ tasks, deleteTask }) => {
           {/* </thead> */}
         </table>
         {/* when you click 'delete' is deletes task*/}
-        <button className="default-btn">Set as Default</button>
+        <button className="default-btn" onClick={() => updateTask(taskId)}>
+          Set as Default
+        </button>
       </div>
       <button className="add-phone">Get SMS</button>
     </div>
