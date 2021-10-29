@@ -49,6 +49,15 @@ export const updateIsDefault = (id, sub) => {
 // another DB query that will update (use where clause where user is the same user as the task you specified, and the id is NOT id you specified && is_dfault = true; <- set those to false)
 // id != $<id>
 
+// adds phone using sub & phone
+export const addPhone = (sub, phone) =>
+  db.one(
+    `INSERT INTO tasks(user_id, phone)
+      VALUES((SELECT id FROM users WHERE sub=$<sub>), $<phone>)
+      RETURNING *`,
+    { sub, phone },
+  );
+
 // MUST GO AFTER GETTASKS
 // get the user's phone #
 export const getPhone = (sub) =>
