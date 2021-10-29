@@ -15,16 +15,20 @@ router.use(express.json());
 // post had both a params & a body
 // body is a separate part of the request from the URL
 router.post("/", async (request, response) => {
+  // save the request using addTask func inside a variable called 'task'
+  // add task is taking 2 parameters, the sub & name
+  console.log("request.user", request.user);
   const task = await db.addTask(request.user.sub, request.body.name);
-  // console.log("inside add method");
+  // what I'm giving back - a status of 201 & converting the task into json
   response.status(201).json(task);
-  // console.log("inside add func");
+  // console.log(response.status); // response.status is func
+  // why can't I console.log(response.json(task))?
 });
 
 // update task/ set default
 router.patch("/:taskId", async (request, response) => {
   const taskId = parseInt(request.params.taskId);
-  console.log("request", request.body);
+  console.log("request", request);
   const task = await db.updateIsDefault(taskId, request.user.sub);
   // what I'm giving back
   response.status(200).json(task);
@@ -32,8 +36,9 @@ router.patch("/:taskId", async (request, response) => {
 
 // delete method
 router.delete("/:deleteId", async (request, response) => {
-  console.log("inside delete");
   // you're assigning request.params.deleteId to variable
+  // request.params returns an id
+  // console.log("request params: ", request.params);
   const deleteId = request.params.deleteId;
   // converting the string to an int
   let strId = parseInt(deleteId);

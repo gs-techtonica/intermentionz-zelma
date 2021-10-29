@@ -35,7 +35,7 @@ const API = () => {
   useEffect(() => {
     // 2nd API
     loadQuote();
-    console.log(otherQuote);
+    // console.log(otherQuote);
 
     fetch(
       `https://quotes.rest/qod?language=en`,
@@ -51,7 +51,7 @@ const API = () => {
       .then((response) => response.json())
 
       .then((response) => {
-        console.log(response);
+        // console.log(response); // success code
         setResponseObj(response);
         setQuote(response.contents.quotes[0].quote);
         setAuthor(response.contents.quotes[0].author);
@@ -67,7 +67,7 @@ const API = () => {
         // setLoading(false);
       });
   }, []);
-  console.log("quotes are", quote);
+  // console.log("quotes are", quote);
 
   // I want to uncomment this
   // .catch((err) => {

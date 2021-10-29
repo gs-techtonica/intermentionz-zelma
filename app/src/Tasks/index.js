@@ -28,6 +28,7 @@ const Tasks = () => {
   const deleteTask = (id) => apiClient.deleteTask(id).then(loadTasks);
 
   React.useEffect(() => {
+    // load tasks when page loads
     !loading && loadTasks();
   }, [loading, loadTasks]);
 
@@ -50,7 +51,7 @@ const Tasks = () => {
 const TaskList = ({ tasks, deleteTask }) => {
   const [taskId, setTaskId] = React.useState();
   const [phone, setPhone] = React.useState();
-  console.log(taskId);
+  // console.log("task id: ", taskId);
   const { apiClient } = useApi();
 
   const updateTask = (id) => {
@@ -60,12 +61,14 @@ const TaskList = ({ tasks, deleteTask }) => {
     };
     apiClient.updateTask(id, updatedTask);
   };
-
-  // handleSubmit
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    return fetch("");
-  };
+  // add phone number when user clicks 'enter phone' btn
+  const addPhone = (phoneNum) => apiClient.addPhone(phoneNum);
+  // console.log("phone: ", phone); - how to only print
+  // // handleSubmit
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   return fetch("");
+  // };
 
   return (
     <div>
@@ -116,7 +119,7 @@ const TaskList = ({ tasks, deleteTask }) => {
           Set as Default
         </button>
       </div>
-
+      {/* pops up when you click 'Get SMS' */}
       <Popup
         className="pop"
         trigger={<button className="get-sms">Get SMS</button>}
@@ -129,7 +132,7 @@ const TaskList = ({ tasks, deleteTask }) => {
             placeholder="Enter phone number"
           />
 
-          <button className="phone-btn" onClick={handleSubmit}>
+          <button className="phone-btn" onClick={() => addPhone(phone)}>
             Enter Phone
           </button>
         </div>

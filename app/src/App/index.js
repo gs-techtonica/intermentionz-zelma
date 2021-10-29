@@ -82,7 +82,7 @@ const Home = () => {
 
 const Dashboard = (addTask) => {
   const { user } = useAuth0();
-  console.log(user);
+  // console.log(user); // checking the user object
   return (
     <div className="dashboard-wrapper">
       <Tasks />

@@ -10,11 +10,10 @@ const makeApi = (accessToken) => {
     addTask: (name) => _post("/api/tasks", { name }),
     // you should specify a server header to have a bearer token
     deleteTask: (id) => _delete(`/api/tasks/${id}`, { id }),
-    updateTask: (id, task) => _post(`/api/tasks/${id}`, { task }),
-    addAffirmations: (name) => _post("/api/affirmations"),
+    updateTask: (id, task) => _patch(`/api/tasks/${id}`, { task }),
     addOrUpdateUser: (user) => _post("/api/users", { user }),
     // add phone number from user to DB
-    addPhone: (phone) => _post("/api/users", { phone }),
+    addPhone: (phone) => _post("/api/users/phone", { phone }),
     // 2nd atttempt at api
     getQuote: () => _get("/api/quote"),
   };
@@ -34,6 +33,18 @@ const makeApi = (accessToken) => {
     return result;
   };
 
+  const _patch = async (url, body) => {
+    const response = await _fetch(url, {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(body),
+    });
+    let result;
+    try {
+      result = await response.json();
+    } catch {}
+    return result;
+  };
   const _delete = (url) => _fetch(url, { method: "DELETE" });
   // this is where it's accessing
   // internal API feature

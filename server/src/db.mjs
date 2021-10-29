@@ -15,6 +15,8 @@ export const getTasks = (sub) =>
 
 // adds tasks using sub & name
 export const addTask = (sub, name) =>
+  // insert into tasks the user_id where sub=sub
+  // insert task name into that row's name column
   db.one(
     `INSERT INTO tasks(user_id, name)
       VALUES((SELECT id FROM users WHERE sub=$<sub>), $<name>)
@@ -30,9 +32,12 @@ export const deleteTask = (id) =>
 export const updateIsDefault = (id, sub) => {
   db.tx((t) => {
     // 1st func - sets everything to false
-    const q1 = t.none(`UPDATE tasks SET is_default=false WHERE sub=$<sub>`, {
-      sub,
-    });
+    const q1 = t.none(
+      `UPDATE tasks SET is_default=false WHERE id=(SELECT id FROM users WHERE sub=$<sub>)`,
+      {
+        sub,
+      },
+    );
     // 2nd func/query - sets is_default to true & id
     const q2 = t.one(
       `UPDATE tasks SET is_default=true WHERE id=$<id> RETURNING *`,
@@ -51,9 +56,10 @@ export const updateIsDefault = (id, sub) => {
 
 // adds phone using sub & phone
 export const addPhone = (sub, phone) =>
+  // insert into tasks the user_id where sub=sub
+  // insert phone into that row's phone column
   db.one(
-    `INSERT INTO tasks(user_id, phone)
-      VALUES((SELECT id FROM users WHERE sub=$<sub>), $<phone>)
+    `UPDATE users SET phone = $<phone> WHERE id=(SELECT id FROM users WHERE sub=$<sub>)
       RETURNING *`,
     { sub, phone },
   );
