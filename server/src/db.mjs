@@ -33,7 +33,7 @@ export const updateIsDefault = (id, sub) => {
   db.tx((t) => {
     // 1st func - sets everything to false
     const q1 = t.none(
-      `UPDATE tasks SET is_default=false WHERE id=(SELECT id FROM users WHERE sub=$<sub>)`,
+      `UPDATE tasks SET is_default=false WHERE id!=(SELECT id FROM users WHERE sub=$<sub>)`,
       {
         sub,
       },
@@ -58,6 +58,7 @@ export const updateIsDefault = (id, sub) => {
 export const addPhone = (sub, phone) =>
   // insert into tasks the user_id where sub=sub
   // insert phone into that row's phone column
+  // *you can't insert into existing row, must use UPDATE SET
   db.one(
     `UPDATE users SET phone = $<phone> WHERE id=(SELECT id FROM users WHERE sub=$<sub>)
       RETURNING *`,

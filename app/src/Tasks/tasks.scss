@@ -27,23 +27,26 @@
 }
 
 .select-div {
+  max-width: 550px;
+  text-align: center;
+  margin: 0 auto;
   margin-top: -20px;
 }
 .select-text {
   font-weight: 100;
-  margin-top: 0px;
   color: white;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
-  font-size: 15px;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.45);
+  font-size: 15.5px;
   text-align: center;
+  margin-bottom: -3px;
 }
 
 .select-text-2 {
   font-weight: 100;
   margin-top: 3px;
   color: white;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
-  font-size: 16px;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.45);
+  font-size: 15.5px;
   text-align: center;
 }
 
@@ -174,20 +177,77 @@ button.delete-btn {
   // can't get it to center
   text-align: center;
   margin-top: 15px;
+  margin: 15px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .add-btn-1 {
   margin-top: 15px;
 }
 
+.default-btn {
+  /* styling */
+  height: 30px;
+  width: 140px;
+  background-color: transarent;
+  border-radius: 25px;
+  color: #411195;
+  font-weight: 300;
+  font-size: 1.1rem;
+  cursor: pointer;
+  /* margin-left: -15px; */
+  padding: 5px 3px;
+  margin-top: 15px;
+  margin-bottom: -20px;
+  margin-right: 10px;
+}
 .get-sms {
   /* styling */
   height: 30px;
-  width: 100px;
+  width: 140px;
+  background-color: transparent;
+  border: 1px solid #411195;
+  border-radius: 25px;
+  color: #411195;
+  font-weight: 300;
+  font-size: 1.1rem;
+  cursor: pointer;
+  /* margin-left: -15px; */
+  padding: 5px 3px;
+  margin-top: 5px;
+  margin-right: 10px;
+}
+
+.phone-text {
+  text-align: center;
+  color: #555;
+}
+.phone-btn {
+  /* styling */
+  height: 30px;
+  width: 140px;
   background-color: #411195;
   border: 1px solid #411195;
   border-radius: 25px;
   color: white;
+  font-weight: 300;
+  font-size: 1.1rem;
+  cursor: pointer;
+  /* margin-left: -15px; */
+  padding: 5px 3px;
+  margin-top: 5px;
+}
+
+.get-text {
+  /* styling */
+  height: 30px;
+  width: 140px;
+  background-color: transparent;
+  border: 1px solid #411195;
+  border-radius: 25px;
+  color: #411195;
   font-weight: 300;
   font-size: 1.1rem;
   cursor: pointer;
@@ -198,39 +258,6 @@ button.delete-btn {
 .popup {
   border-radius: 15px;
   text-align: center;
-}
-
-.default-btn {
-  /* styling */
-  height: 30px;
-  width: 150px;
-  background-color: #411195;
-  border: 1px solid #411195;
-  border-radius: 25px;
-  color: white;
-  font-weight: 300;
-  font-size: 1.1rem;
-  cursor: pointer;
-  /* margin-left: -15px; */
-  padding: 5px 3px;
-  margin-top: 15px;
-  margin-bottom: -20px;
-}
-
-.phone-btn {
-  /* styling */
-  height: 30px;
-  width: 130px;
-  background-color: #411195;
-  border: 1px solid #411195;
-  border-radius: 25px;
-  color: white;
-  font-weight: 300;
-  font-size: 1.1rem;
-  cursor: pointer;
-  /* margin-left: -15px; */
-  padding: 5px 3px;
-  margin-top: 5px;
 }
 
 button:hover {

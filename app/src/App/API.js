@@ -51,7 +51,7 @@ const API = () => {
       .then((response) => response.json())
 
       .then((response) => {
-        // console.log(response); // success code
+        // console.log(response); // success c
         setResponseObj(response);
         setQuote(response.contents.quotes[0].quote);
         setAuthor(response.contents.quotes[0].author);

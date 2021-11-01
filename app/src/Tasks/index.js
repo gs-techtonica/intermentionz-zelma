@@ -50,8 +50,9 @@ const Tasks = () => {
 // TaskList component
 const TaskList = ({ tasks, deleteTask }) => {
   const [taskId, setTaskId] = React.useState();
+  console.log("task id: ", taskId);
   const [phone, setPhone] = React.useState();
-  // console.log("task id: ", taskId);
+  console.log("phone: ", phone);
   const { apiClient } = useApi();
 
   const updateTask = (id) => {
@@ -74,10 +75,11 @@ const TaskList = ({ tasks, deleteTask }) => {
     <div>
       <div className="select-div">
         <p className="select-text">
-          *Want to receive SMS texts with your favorite Mention?
+          *Want to receive SMS texts of your favorite Mention?
         </p>
         <p className="select-text-2">
-          Select one Mention below & click 'Get SMS'
+          Select a Mention below & click 'Set as Default', then click 'Enter
+          Phone', and finally, select 'Get SMS' to receive your Mention!
         </p>
       </div>
       <div className="table-wrapper">
@@ -118,25 +120,30 @@ const TaskList = ({ tasks, deleteTask }) => {
         <button className="default-btn" onClick={() => updateTask(taskId)}>
           Set as Default
         </button>
-      </div>
-      {/* pops up when you click 'Get SMS' */}
-      <Popup
-        className="pop"
-        trigger={<button className="get-sms">Get SMS</button>}
-        modal
-      >
-        <div className="popup">
-          <input
-            onChange={(e) => setPhone(e.target.value)}
-            className="phone-input"
-            placeholder="Enter phone number"
-          />
 
-          <button className="phone-btn" onClick={() => addPhone(phone)}>
-            Enter Phone
-          </button>
-        </div>
-      </Popup>
+        {/* pops up when you click 'Get SMS' */}
+        <Popup
+          className="pop"
+          trigger={<button className="get-sms">Enter Phone</button>}
+          modal
+        >
+          <p className="phone-text">
+            Add +1 before number, and don't include dashes{" "}
+          </p>
+          <div className="popup">
+            <input
+              onChange={(e) => setPhone(e.target.value)}
+              className="phone-input"
+              placeholder="Enter phone number"
+            />
+
+            <button className="phone-btn" onClick={() => addPhone(phone)}>
+              Enter Phone
+            </button>
+          </div>
+        </Popup>
+        <button className="get-text">Get SMS</button>
+      </div>
     </div>
   );
 };

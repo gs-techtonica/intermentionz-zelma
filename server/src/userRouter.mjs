@@ -14,7 +14,7 @@ router.post("/", async (request, response) => {
 router.use(express.json());
 router.post("/phone", async (request, response) => {
   // save the request using addPhone func inside a variable called 'phone'
-  console.log("request.body: ", request.body);
+  // console.log("request.body: ", request.body);
   const phone = await db.addPhone(request.user.sub, request.body.phone);
   // what we're giving back - a status code & phone.json()
   response.status(201).json(phone);
