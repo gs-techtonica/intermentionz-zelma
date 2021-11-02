@@ -28,7 +28,7 @@ router.post("/", async (request, response) => {
 // update task/ set default
 router.patch("/:taskId", async (request, response) => {
   const taskId = parseInt(request.params.taskId);
-  console.log("request", request);
+  // console.log("request", request);
   const task = await db.updateIsDefault(taskId, request.user.sub);
   // what I'm giving back
   response.status(200).json(task);

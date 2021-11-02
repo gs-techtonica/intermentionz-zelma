@@ -173,6 +173,15 @@ button.delete-btn {
   padding: 5px 0px;
 }
 
+.buttons {
+  text-align: center;
+  margin-top: 15px;
+  margin: 15px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .add-btn {
   // can't get it to center
   text-align: center;
@@ -199,7 +208,7 @@ button.delete-btn {
   cursor: pointer;
   /* margin-left: -15px; */
   padding: 5px 3px;
-  margin-top: 15px;
+  margin-top: 5px;
   margin-bottom: -20px;
   margin-right: 10px;
 }
@@ -217,6 +226,7 @@ button.delete-btn {
   /* margin-left: -15px; */
   padding: 5px 3px;
   margin-top: 5px;
+  margin-bottom: -20px;
   margin-right: 10px;
 }
 
@@ -254,6 +264,7 @@ button.delete-btn {
   /* margin-left: -15px; */
   padding: 5px 3px;
   margin-top: 5px;
+  margin-bottom: -20px;
 }
 .popup {
   border-radius: 15px;
