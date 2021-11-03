@@ -17,19 +17,20 @@ let client = twilio(accountSid, authToken);
 // gets the Task using user.sub
 router.post("/", async (request, response) => {
   const phone = await db.getPhone(request.user.sub);
-  console.log(response.body);
+  // console.log(response.body);
   response.json(phone);
 
-  let message = "";
+  let message = await db.getMessage(request.body.id);
+
   // don't use request.message.id
-  if (request.body.id) {
-    message = await db.getMessage(request.body.id);
-  } else {
-    message = await db.getDefault(request.user.sub);
-  }
+  // if (request.body.id) {
+  //   message = await db.getMessage(request.body.id);
+  // } else {
+  //   message = await db.getDefault(request.user.sub);
+  // }
 
   client.messages.create({
-    body: message,
+    body: "howdy",
     from: "+12178852760",
     to: phone, // you don't have to interpolate in obj
   });
