@@ -17,7 +17,7 @@ let client = twilio(accountSid, authToken);
 // gets the Task using user.sub
 router.post("/", async (request, response) => {
   const phone = await db.getPhone(request.user.sub);
-  // console.log(response.body);
+  console.log(response.body); // undefined?
   response.json(phone);
 
   // let message = await db.getMessage(request.body.id);
