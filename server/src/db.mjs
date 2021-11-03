@@ -67,9 +67,23 @@ export const addPhone = (sub, phone) =>
 
 // MUST GO AFTER GETTASKS
 // get the user's phone #
-export const getPhone = (sub) =>
-  db.one(`SELECT phone from users WHERE sub=$<sub>`, { sub });
+export const getPhone = async (sub) => {
+  const user = await db.one(`SELECT phone from users WHERE sub=$<sub>`, {
+    sub,
+  });
+  return user.phone;
+};
 
+export const getMessage = async (sub, id) => {
+  const task = await db.one(
+    `SELECT name FROM tasks WHERE id = $<id> AND user_id=(SELECT id FROM users WHERE sub=$<sub>)`,
+    {
+      sub,
+      id,
+    },
+  );
+  return task.name;
+};
 // // add phone
 // // adds tasks using sub & name
 // export const addTask = (sub, phone) =>

@@ -69,7 +69,7 @@ const TaskList = ({ tasks, deleteTask }) => {
   //   e.preventDefault();
   //   return fetch("");
   // };
-  const sendSMS = (phoneNum) => apiClient.sendSMS(taskId);
+  const sendSMS = (taskId) => apiClient.sendSMS(taskId);
 
   return (
     <div>
