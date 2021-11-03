@@ -9,6 +9,7 @@ const API = () => {
   const [responseObj, setResponseObj] = React.useState({});
   const [quote, setQuote] = React.useState("");
   const [author, setAuthor] = React.useState("");
+  let [error, setError] = React.useState(false);
 
   // add new Affirmation/task
   const [tasks, setTasks] = React.useState([]);
@@ -52,29 +53,30 @@ const API = () => {
 
       .then((response) => {
         // console.log(response); // success c
+        if (!response.success) {
+          throw new Error();
+        }
+
         setResponseObj(response);
         setQuote(response.contents.quotes[0].quote);
         setAuthor(response.contents.quotes[0].author);
         // console.log("response.status is " + response.status);
         // 2nd version: 200 is a string
         // // in this API, we had to use success to check if it passed or not
-        if (!response.success) {
-          throw new Error();
-        }
-
-        // console.log("this is the responseObj");
-        // takes take the json & saves json response as responseObj state
+      })
+      .catch((err) => {
+        setError(true);
         // setLoading(false);
+        console.log("error");
       });
-  }, []);
-  // console.log("quotes are", quote);
 
-  // I want to uncomment this
-  // .catch((err) => {
-  //   setError(true);
-  //   // setLoading(false);
-  //   console.log("error");
-  // });
+    // console.log("this is the responseObj");
+    // takes take the json & saves json response as responseObj state
+    // setLoading(false);
+    // console.log("quotes are", quote);
+
+    // I want to uncomment thi
+  }, []);
 
   return (
     <div className="quote-wrapper">
