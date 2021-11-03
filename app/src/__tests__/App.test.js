@@ -3,12 +3,12 @@ import React from "react";
 import { cleanup, fireEvent, render } from "@testing-library/react";
 import TestRenderer from "react-test-renderer";
 
-import App from "../index";
+import Home from "../App/Home";
 
 it("App", () => {
-  const { getByText } = render(<App />);
+  const { getByText } = render(<Home />);
 
-  fireEvent.click(getByText("About"));
+  // fireEvent.click(getByText("About"));
 
-  expect(getByText("About")).toBeInTheDocument();
+  expect(getByText("Loading ...")).toBeInTheDocument();
 });
