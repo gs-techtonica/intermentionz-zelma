@@ -20,7 +20,7 @@ router.post("/", async (request, response) => {
   // console.log(response.body);
   response.json(phone);
 
-  let message = await db.getMessage(request.body.id);
+  // let message = await db.getMessage(request.body.id);
 
   // don't use request.message.id
   // if (request.body.id) {

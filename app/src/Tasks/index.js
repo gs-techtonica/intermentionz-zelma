@@ -69,6 +69,7 @@ const TaskList = ({ tasks, deleteTask }) => {
   //   e.preventDefault();
   //   return fetch("");
   // };
+  const sendSMS = (phoneNum) => apiClient.sendSMS(taskId);
 
   return (
     <div>
@@ -142,7 +143,7 @@ const TaskList = ({ tasks, deleteTask }) => {
               </button>
             </div>
           </Popup>
-          <button className="get-text" onClick={() => addPhone(taskId)}>
+          <button className="get-text" onClick={() => sendSMS(taskId)}>
             Get SMS
           </button>
         </div>

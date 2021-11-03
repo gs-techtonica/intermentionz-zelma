@@ -16,6 +16,7 @@ const makeApi = (accessToken) => {
     addPhone: (phone) => _post("/api/users/phone", { phone }),
     // 2nd atttempt at api
     getQuote: () => _get("/api/quote"),
+    sendSMS: (id) => _get("/api/sms", { id }),
   };
 
   const _get = async (url) => (await _fetch(url)).json();
