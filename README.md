@@ -4,7 +4,7 @@
 
 InterMention is a an application that utilizes the Cognitive Restructuring technique to Reinforce, Remind, and Redirect the user's thought process by having positive affirmations available at their fingertips. Users can add quotes and affirmations to their table, and remove quotes. In addition, InterMention will display a Quote of the Day from the Affirmations API.
 
-### [<ins>See InterMention Live on Heroku</ins>](https://intermention.herokuapp.com/)
+[See the app in action][live].
 
 ## Technologies
 
