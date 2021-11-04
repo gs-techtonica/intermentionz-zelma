@@ -3,6 +3,7 @@ import React from "react";
 import useAuth0 from "../auth/useAuth0";
 
 import Dashboard from "./Dashboard";
+import "./App.css";
 const Home = () => {
   const { isLoading, isAuthenticated } = useAuth0();
 

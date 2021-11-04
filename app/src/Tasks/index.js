@@ -78,8 +78,7 @@ const TaskList = ({ tasks, deleteTask }) => {
           *Want to receive SMS texts of your favorite Mention?
         </p>
         <p className="select-text-2">
-          Select a Mention below & click 'Set as Default', then click 'Enter
-          Phone', and finally, select 'Get SMS' to receive your Mention!
+          Select a Mention below, enter your Phone Number, and click 'Get SMS'
         </p>
       </div>
       <div className="table-wrapper">
@@ -118,9 +117,9 @@ const TaskList = ({ tasks, deleteTask }) => {
         </table>
         {/* when you click 'delete' is deletes task*/}
         <div className="buttons">
-          <button className="default-btn" onClick={() => updateTask(taskId)}>
+          {/* <button className="default-btn" onClick={() => updateTask(taskId)}>
             Set as Default
-          </button>
+          </button> */}
 
           {/* pops up when you click 'Get SMS' */}
           <Popup
@@ -178,7 +177,7 @@ const AddTask = ({ addTask }) => {
           />
         </label>
         <button className="add-btn" disabled={!canAdd}>
-          Add
+          Add Mention
         </button>
       </form>
     </div>
