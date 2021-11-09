@@ -22,13 +22,7 @@ InterMention is a an application that utilizes the Cognitive Restructuring techn
 3. Create a `.env` file in the `app/` directory & add these lines:
 
 ```
-REACT_APP_TITLE=Super Useful Title
-REACT_APP_SUBTITLE=Super Useful Subtitle
-REACT_APP_AUTH0_DOMAIN=dev-p-oh8rv8.us.auth0.com
-REACT_APP_AUTH0_CLIENT_ID=nuL0OYwWbzT6s6jlbkfVtHrqGdX2E050
-REACT_APP_AUTH0_AUDIENCE=http://api.tt-express.example
-REACT_APP_TWILIO_ACCOUNT_SID=ACabe64e7537e1279539d654c48fae1774
-REACT_APP_TWILIO_AUTH_TOKEN=533a9e3f87ebb7f53ee129739f4faf56
+
 ```
 
 4. In your CLI, from the root directory, run `npm install`
