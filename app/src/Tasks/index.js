@@ -128,13 +128,13 @@ const TaskList = ({ tasks, deleteTask }) => {
             modal
           >
             <p className="phone-text">
-              Add +1 before number, and don't include dashes{" "}
+              Add +1 before number, and don't include dashes
             </p>
             <div className="popup">
               <input
                 onChange={(e) => setPhone(e.target.value)}
                 className="phone-input"
-                placeholder="Enter phone number"
+                placeholder="+15555555555"
               />
 
               <button className="phone-btn" onClick={() => addPhone(phone)}>

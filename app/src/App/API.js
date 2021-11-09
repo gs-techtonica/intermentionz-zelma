@@ -52,7 +52,7 @@ const API = () => {
       .then((response) => response.json())
 
       .then((response) => {
-        // console.log(response); // success c
+        console.log(response); // success c
         if (!response.success) {
           throw new Error();
         }
