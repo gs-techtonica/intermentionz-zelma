@@ -12,6 +12,8 @@ InterMention is a an application that utilizes the Cognitive Restructuring techn
 - PostgreSQL
 - Express.js
 - Raw CSS ('cuz I :heart: CSS)
+- Twilio SMS API
+- Auth0 API
 
 ## Running Locally
 
