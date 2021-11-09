@@ -31,6 +31,9 @@ REACT_APP_TWILIO_AUTH_TOKEN=533a9e3f87ebb7f53ee129739f4faf56
 
 4. In your CLI, from the root directory, run `npm install`
 5. Navigate into /app with `cd app` & run `npm install`
+6. Navigate back to the root directory & run `npm run db:init`
+7. Also from the root directory, run `npm start`
+8. InterMention will be running on `localhost:3000`
 
 ## MVP (Minimal Viable Product)
 
