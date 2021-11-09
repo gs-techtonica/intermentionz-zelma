@@ -39,11 +39,14 @@ REACT_APP_TWILIO_AUTH_TOKEN=533a9e3f87ebb7f53ee129739f4faf56
 
 ## MVP (Minimal Viable Product)
 
+- The user can log in with their Google account
 - The user can add affirmations to their list and view them at any given time
-- Applications uses an Affirmations API to consume a new affirmation/quote every call, which I am calling Quote of the Day
-- User can also add Quote of the Day to their Affirmations List
+- Applications uses an Affirmations API to consume a Quote of the Day
+- User can delete affirmations from table
 
-send that quote to the user via push notifications (Twilio SMS API)
+## Stretch Goal
+
+- Send their favorite Mention/Affirmation to the user via text (Twilio SMS API)
 
 ## Mockup/Wireframe
 
@@ -54,7 +57,3 @@ Landing Page
 Dream Dashboard
 <br>
 <img src="https://raw.githubusercontent.com/ZelmaSedano/intermentionz/main/dashboard.png" width="300px">
-
-## Addons
-
-Use Twilio SMS Push Notifications to send a default quote to the user's phone number
