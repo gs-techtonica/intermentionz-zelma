@@ -13,6 +13,10 @@ InterMention is a an application that utilizes the Cognitive Restructuring techn
 - Express.js
 - Raw CSS ('cuz I :heart: CSS)
 
+## Running Locally
+
+- Install & Run <a href='https://www.docker.com/'>Docker</a>
+
 ## MVP (Minimal Viable Product)
 
 - The user can add affirmations to their list and view them at any given time
