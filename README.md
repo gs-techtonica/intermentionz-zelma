@@ -25,11 +25,11 @@ send that quote to the user via push notifications (Twilio SMS API)
 
 Landing Page
 <br>
-<img src="https://raw.githubusercontent.com/ZelmaSedano/InterMention_2/main/landing.png" width="300px">
+<img src="https://raw.githubusercontent.com/ZelmaSedano/intermentionz/main/landing.png" width="300px">
 
 Dream Dashboard
 <br>
-<img src="https://raw.githubusercontent.com/ZelmaSedano/InterMention_2/main/dashboard.png" width="300px">
+<img src="https://raw.githubusercontent.com/ZelmaSedano/intermentionz/main/dashboard.png" width="300px">
 
 ## Addons
 
