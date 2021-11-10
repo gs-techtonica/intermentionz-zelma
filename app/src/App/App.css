@@ -93,8 +93,6 @@ button.login:hover {
 }
 
 .dashboard-wrapper {
-  /* background: url("../1_components/images/serene.jpg") no-repeat center center
-    fixed; */
   background: url("../1_components/images/serene.jpg") no-repeat center center
     fixed;
   -webkit-background-size: cover;
