@@ -49,8 +49,10 @@ const Tasks = () => {
 
 // TaskList component
 const TaskList = ({ tasks, deleteTask }) => {
-  const [taskId, setTaskId] = React.useState();
+  const [taskId, setTaskId] = React.useState(); // default is undefined
   console.log("task id: ", taskId);
+  const [errorMessage, setErrorMessage] = React.useState();
+  // console.log(errorMessage);  //
   const [phone, setPhone] = React.useState();
   const { apiClient } = useApi();
 
@@ -69,7 +71,17 @@ const TaskList = ({ tasks, deleteTask }) => {
   //   e.preventDefault();
   //   return fetch("");
   // };
-  const sendSMS = (taskId) => apiClient.sendSMS(taskId);
+  // add something that validates that the taskId is defined; if not, throw error
+  // refactoring this short-hand arrow function to (w/ implicit return/no curly braces) to have curly braces & a body/return
+  const sendSMS = (taskId) => {
+    if (taskId === undefined) {
+      // throw new Error("Please enter valid phone number"); - this is scary
+      setErrorMessage('Please select a Mention before clicking "Send SMS"');
+    } else {
+      setErrorMessage(); // makes it go away after you make the right selection, and returns to undefined
+      return apiClient.sendSMS(taskId);
+    }
+  };
 
   return (
     <div>
@@ -83,6 +95,7 @@ const TaskList = ({ tasks, deleteTask }) => {
       </div>
       <div className="table-wrapper">
         <h1 className="table-header">Your Mentions / Reminders</h1>
+        <p>*default</p>
         <table className="center">
           {/* <thead> */}
           <tbody>
@@ -146,6 +159,7 @@ const TaskList = ({ tasks, deleteTask }) => {
             Get SMS
           </button>
         </div>
+        {errorMessage && <p className="error">{errorMessage}</p>}
       </div>
     </div>
   );
