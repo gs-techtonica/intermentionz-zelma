@@ -47,7 +47,7 @@ REACT_APP_TWILIO_AUTH_TOKEN=<copy/paste your api key here>
 
 ## Stretch Goal
 
-- Send their favorite Mention/Affirmation to the user via text (Twilio SMS API)
+- Send their favorite Mention/Affirmation to the user via text (Twilio SMS API) - ACHIEVED!
 
 ## Mockup/Wireframe
 
