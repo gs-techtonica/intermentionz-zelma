@@ -96,7 +96,7 @@ const TaskList = ({ tasks, deleteTask }) => {
       </div>
       <div className="table-wrapper">
         <h1 className="table-header">Your Mentions / Reminders</h1>
-        <p>*default</p>
+        <p className="default">*default</p>
         <table className="center">
           {/* <thead> */}
           <tbody>
