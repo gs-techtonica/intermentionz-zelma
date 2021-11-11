@@ -77,7 +77,7 @@ const TaskList = ({ tasks, deleteTask }) => {
   const sendSMS = (taskId) => {
     if (taskId === undefined) {
       // throw new Error("Please enter valid phone number"); - this is scary
-      setErrorMessage('Please select a Mention before clicking "Send SMS"');
+      setErrorMessage('*Please select a Mention before clicking "Send SMS"');
     } else {
       setErrorMessage(); // makes it go away after you make the right selection, and returns to undefined
       return apiClient.sendSMS(taskId);
@@ -160,6 +160,7 @@ const TaskList = ({ tasks, deleteTask }) => {
             Get SMS
           </button>
         </div>
+        {/* error for when user doesn't make a selection before hitting 'Get SMS'*/}
         {errorMessage && <p className="error">{errorMessage}</p>}
       </div>
     </div>
