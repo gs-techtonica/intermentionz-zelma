@@ -1,4 +1,4 @@
-# InterMention
+# InterMention - Change How You Think
 
 ## Capstone Project for Techtonica
 
