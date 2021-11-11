@@ -50,10 +50,11 @@ const Tasks = () => {
 // TaskList component
 const TaskList = ({ tasks, deleteTask }) => {
   const [taskId, setTaskId] = React.useState(); // default is undefined
-  console.log("task id: ", taskId);
+  // console.log("task id: ", taskId);
   const [errorMessage, setErrorMessage] = React.useState();
-  // console.log(errorMessage);  //
+  // console.log(errorMessage); //
   const [phone, setPhone] = React.useState();
+  console.log(phone);
   const { apiClient } = useApi();
 
   const updateTask = (id) => {
