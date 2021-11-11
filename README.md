@@ -35,7 +35,7 @@ REACT_APP_TWILIO_AUTH_TOKEN=<copy/paste your api key here>
 5. Navigate into /app with `cd app` & run `npm install`
 6. Navigate back to the root directory & run `npm run db:init`
 7. Also from the root directory, run `npm start`
-8. InterMention will be running on `localhost:3000`
+8. InterMention will be running on <a href='www.localhost:3000'>localhost:3000</a>
 9. If you would like to receive a Mention via text simply add a new Mention to your table, enter your phone number (click 'Enter Phone'), and click 'Get SMS' button
 
 ## MVP (Minimal Viable Product)
