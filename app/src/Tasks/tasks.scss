@@ -200,7 +200,7 @@ button.delete-btn {
 .add-btn {
   // can't get it to center
   text-align: center;
-  margin-top: 15px;
+  margin-top: 25px;
   margin: 15px auto;
   display: flex;
   justify-content: center;
@@ -295,6 +295,7 @@ button:hover {
 
 .add-btn {
   text-align: center; // ?
+  margin-top: 20px;
 }
 
 @media screen and (max-width: 700px) {
@@ -329,6 +330,7 @@ button:hover {
   textarea {
     width: 400px;
     margin-left: -16%;
+    margin-bottom: 10px;
   }
 }
 
@@ -357,6 +359,16 @@ button:hover {
 
   textarea {
     width: 300px;
-    margin-left: 0%;
+    margin-bottom: 10px;
+    margin-left: 0px;
+  }
+
+  table {
+    margin-top: 30px;
+    border-collapse: collapse;
+    overflow-y: scroll !important;
+    display: block;
+    width: 600px;
+    height: 260px !important;
   }
 }

@@ -269,8 +269,25 @@ button.login:hover {
     margin: 0 auto;
   }
 
-  img {
+  /* img {
     margin-top: 5px;
     height: 160px;
+  } */
+
+  .table-p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .add-btn {
+    text-align: center;
+    margin-top: 25px;
+    margin: 15px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .add-btn-1 {
+    margin-top: 25px;
   }
 }
