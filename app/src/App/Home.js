@@ -14,9 +14,7 @@ const Home = () => {
         <p>{process.env.REACT_APP_SUBTITLE}</p>
       </header> */}
       {isLoading ? (
-        <>
-          <div>Loading ...</div>
-        </>
+        <>{/* <div>Loading ...</div> */}</>
       ) : !isAuthenticated ? (
         <div>
           <div className="hero-wrapper">
