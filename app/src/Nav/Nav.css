@@ -311,7 +311,7 @@ button:hover {
     /* distance between */
     grid-gap: 10px;
     /* pushes entire menu up */
-    padding-bottom: 40px;
+    padding-bottom: 78px;
     position: absolute;
     width: 100%;
     height: 55vh;
