@@ -6,6 +6,8 @@ InterMention is a an application that utilizes the Cognitive Restructuring techn
 
 <h3>View on Heroku: <a href='https://intermentionz.herokuapp.com/'>InterMention</a><h3>
 
+<img src="./serene.png">
+
 ## Technologies
 
 - React.js
