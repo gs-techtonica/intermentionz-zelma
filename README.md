@@ -61,7 +61,7 @@ Model = PostgreSQL, View = React.js, Control = Express.js
 
 - Send their favorite Mention/Affirmation to the user via text (Twilio SMS API) - ACHIEVED!
 
-## Mockup/Wireframe
+## Mockups & WireFrames
 
 Landing Page
 <br>
@@ -70,3 +70,5 @@ Landing Page
 Dream Dashboard
 <br>
 <img src="https://raw.githubusercontent.com/ZelmaSedano/intermentionz/main/dashboard.png" width="300px">
+
+## See Zelma's Other Projects <a href='https://portfolio-zvs.herokuapp.com/'>Here!</a>

@@ -13,6 +13,7 @@ const Home = () => {
         <h1>{process.env.REACT_APP_TITLE}</h1>
         <p>{process.env.REACT_APP_SUBTITLE}</p>
       </header> */}
+      {/* isLoading removed b/c it was messing with Heroku */}
       {!isAuthenticated ? (
         <div>
           <div className="hero-wrapper">
