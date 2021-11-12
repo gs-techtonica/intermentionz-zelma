@@ -13,9 +13,7 @@ const Home = () => {
         <h1>{process.env.REACT_APP_TITLE}</h1>
         <p>{process.env.REACT_APP_SUBTITLE}</p>
       </header> */}
-      {isLoading ? (
-        <>{/* <div>Loading ...</div> */}</>
-      ) : !isAuthenticated ? (
+      {!isAuthenticated ? (
         <div>
           <div className="hero-wrapper">
             <section className="text-wrapper">

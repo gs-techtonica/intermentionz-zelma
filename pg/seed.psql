@@ -105,7 +105,6 @@ COPY public.tasks (id, name, user_id, is_default) FROM stdin;
 51	I'm smart enough	930	f
 52	Daggonit, people like me	930	f
 17	You're good enough	150	f
-80	Another mention	2	f
 \.
 
 
@@ -126,14 +125,14 @@ COPY public.users (id, given_name, family_name, email, sub, phone, picture) FROM
 -- Name: tasks_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.tasks_id_seq', 80, true);
+SELECT pg_catalog.setval('public.tasks_id_seq', 83, true);
 
 
 --
 -- Name: users_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.users_id_seq', 1188, true);
+SELECT pg_catalog.setval('public.users_id_seq', 1265, true);
 
 
 --
