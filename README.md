@@ -1,8 +1,6 @@
-# InterMention - Change How You Think
+# InterMention - Change How You Think!
 
-## Capstone Project for Techtonica
-
-InterMention is a an application that utilizes the Cognitive Restructuring Repetition and Reminding technique to Reinforce and Redirect the user's thought process by having positive affirmations available at their fingertips. Users can add quotes and affirmations to their table, remove quotes, and text them to themselves using SMS. In addition, InterMention will display a Quote of the Day from the Affirmations API.
+InterMention is a an application that utilizes Psychology's Repetition and Reminding technique (Cognitive Restructuring) to Reinforce and Redirect the user's thought process by having positive affirmations available at their fingertips. Users can add quotes and affirmations to their table, remove quotes, and even text them to themselves using SMS. In addition, InterMention will display a Quote of the Day from the Affirmations API.
 
 ## Upcoming Additions:
 
@@ -48,8 +46,8 @@ Model = PostgreSQL, View = React.js, Control = Express.js
 - React.js
 - Express.js
 - Raw CSS ('cuz I :heart: CSS)
-- Twilio SMS API
 - Auth0 API
+- Twilio SMS API
 - They Said So API
 
 ## MVP (Minimal Viable Product)
