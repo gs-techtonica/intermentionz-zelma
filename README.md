@@ -81,7 +81,8 @@ Dashboard
   <tr>
     <td align="center"><a href="https://github.com/gsong"><img src="https://avatars.githubusercontent.com/u/607420?v=4?s=100" width="100px;" alt=""/><br /><sub><b>George Song</b></sub></br></a></td>
     <td align="center"><a href="https://github.com/brenthaas"><img src="https://avatars.githubusercontent.com/u/1712361?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Brent Haas</b></sub></br></a></td>
-    <td align="center"><a href="https://github.com/margaretgeary"><img src="https://avatars.githubusercontent.com/u/68314320?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Margar Geary</b></sub></br></a></td>
+    <td align="center"><a href="https://github.com/margaretgeary"><img src="https://avatars.githubusercontent.com/u/68314320?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Margaret Geary</b></sub></br></a></td>
+    <td align="center"><a href="https://github.com/nbrengle"><img src="https://avatars.githubusercontent.com/u/3836628?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Nate Mooney</b></sub></br></a></td>
     <td align="center"><a href="https://github.com/tabbykatz"><img src="https://avatars.githubusercontent.com/u/55110763?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tabitha O'Melay</b></br></sub></td>
 
   </tr>
