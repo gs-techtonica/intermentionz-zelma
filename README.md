@@ -86,7 +86,9 @@ Special thanks to these folks ([emoji key](https://allcontributors.org/docs/en/e
     <td align="center"><a href="https://github.com/brenthaas"><img src="https://avatars.githubusercontent.com/u/1712361?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Brent Haas</b></sub><br /></a>🧑‍🏫💬💻</td>
     <td align="center"><a href="https://github.com/margaretgeary"><img src="https://avatars.githubusercontent.com/u/68314320?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Margaret Geary</b></sub><br /><a href="https://github.com/gsong/express-react-project-example/commits?author=gsong" title="Mentor"></a>🧑‍🏫🎨🤔⚠️</td>
     <td align="center"><a href="https://github.com/nbrengle"><img src="https://avatars.githubusercontent.com/u/3836628?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Nate Mooney</b></sub></br></a>🧑‍🏫💻🔬</td>
-    <td align="center"><a href="https://github.com/tabbykatz"><img src="https://avatars.githubusercontent.com/u/55110763?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tabitha O'Melay</b></br></sub></a>👀</td>
-
+    <td align="center"><a href="https://github.com/tabbykatz"><img src="https://avatars.githubusercontent.com/u/55110763?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tabitha O'Melay</b></br></sub></a>👀💬</td>
+    <td align="center"><a href="https://github.com/tabbykatz"><img src="https://avatars.githubusercontent.com/u/55110763?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tabitha O'Melay</b></br></sub></a>👀💬</td>
+    <td align="center"><a href="https://github.com/jenhuynh"><img src="https://avatars.githubusercontent.com/u/15962197?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jen Huynh</b></br></sub></a>👀📢</td>
+    <td align="center"><a href="https://github.com/NatalieMonique111"><img src="https://avatars.githubusercontent.com/u/82853021?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Natalie Monique</b></br></sub></a>📢</td>
   </tr>
 <table>
