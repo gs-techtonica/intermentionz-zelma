@@ -10,8 +10,6 @@ Sending users their favorite Mention on a schedule so that they are reminded of 
 
 <img src="./serene.png">
 
-### :dizzy: See Zelma's Other Projects <a href='https://portfolio-zvs.herokuapp.com/'>Here!</a>
-
 ## Running Locally
 
 1. Install & run <a href='https://www.docker.com/'>Docker</a>
@@ -74,3 +72,5 @@ Landing Page
 Dashboard
 <br>
 <img src="https://raw.githubusercontent.com/ZelmaSedano/intermentionz/main/dashboard.png" width="300px">
+
+### :dizzy: See Zelma's Other Projects <a href='https://portfolio-zvs.herokuapp.com/'>Here!</a>
