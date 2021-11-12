@@ -78,6 +78,8 @@ Dashboard
 
 ## Contributors:
 
+Special thanks to these folks ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
 <table>
   <tr>
     <td align="center"><a href="https://github.com/gsong"><img src="https://avatars.githubusercontent.com/u/607420?v=4?s=100" width="100px;" alt=""/><br /><sub><b>George Song</b></sub></a><br /><a href="https://github.com/gsong/express-react-project-example/commits?author=gsong" title="Code">💻</a> <a href="https://github.com/gsong/express-react-project-example/commits?author=gsong" title="Documentation">📖</a> <a href="#infra-gsong" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#contributors" title="Ideas, Planning, & Feedback">🤔</a><a href="#maintenance-gsong" title="Maintenance">🚧</a></td>
