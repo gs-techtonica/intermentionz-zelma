@@ -6,9 +6,9 @@ InterMention is a an application that utilizes the Cognitive Restructuring Repet
 
 ## Upcoming Additions:
 
-Sending users their favorite reminder on a schedule so that they are reminded of something positive throughout their day, which can slowly over time counteract negative thought patterns
+Sending users their favorite Mention on a schedule so that they are reminded of something positive throughout their day, which can slowly over time counteract negative thought patterns.
 
-<h3>View on Heroku: <a href='https://intermentionz.herokuapp.com/'  target='_blank'>InterMention</a><h3>
+<h3><a href='https://intermentionz.herokuapp.com/'  target='_blank'>View InterMention on Heroku</a><h3>
 
 <img src="./serene.png">
 
