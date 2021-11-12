@@ -7,7 +7,6 @@ InterMention is a an application that utilizes Psychology's Repetition and Remin
 Sending users their favorite Mention on a schedule so that they are reminded of something positive throughout their day, which can slowly over time counteract negative thought patterns.
 
 <h3><a href='https://intermentionz.herokuapp.com/' target='_blank'>View InterMention on Heroku</a><h3>
-[![Header](https://github.com/ZelmaSedano/ZelmaSedano/intermentionz/main/serene.png "Header")]( https://intermentionz.herokuapp.com/)
 
 <img src="./serene.png">
 
