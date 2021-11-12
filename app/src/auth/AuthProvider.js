@@ -13,7 +13,8 @@ const AuthProvider = (props) => {
   const onRedirectCallback = (appState) => {
     navigate(appState?.returnTo || window.location.pathname);
   };
-
+  // tried setting it to true so it would always work
+  // https://community.auth0.com/t/silent-authentication-returning-200-with-isauthenticated-false/54732
   const useRefreshTokens = true;
   const cacheLocation = "localstorage";
 
