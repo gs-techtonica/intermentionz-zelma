@@ -54,15 +54,15 @@ Model = PostgreSQL, View = React.js, Control = Express.js
 
 ## MVP (Minimal Viable Product)
 
-- The user can log in with their Google account
+- The user can login using Auth0 (additions: Google Login Feature)
 - The user can add affirmations to their list and view them at any given time
-- Applications uses an Affirmations API to consume a Quote of the Day
 - User can delete affirmations from table
+- Consume a Quote of the Day API
 
 ## Stretch Goals
 
 - Send their favorite Mention/Affirmation to the user via text (Twilio SMS API) - ACHIEVED!
-- Send the user's SMS on a schedule (partly achieved - yet to be implemented)
+- Send the user's SMS on a schedule (added as an OpenSource Issue)
 
 ## Mockups & WireFrames
 
