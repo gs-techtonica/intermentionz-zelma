@@ -1,6 +1,7 @@
 // import dotenv from "dotenv";
 import express from "express";
 import mime from "mime-types";
+import http from "http";
 // import twilio from "twilio";
 
 // import affirmationsRouter from "./affirmationsRouter.mjs";
@@ -13,23 +14,10 @@ import userRouter from "./userRouter.mjs";
 
 const app = express();
 
-// Twilio
-// dotenv.config();
-
-// const accountSid = process.env.TWILIO_ACCOUNT_SID;
-// const authToken = process.env.TWILIO_AUTH_TOKEN;
-// let client = twilio(accountSid, authToken);
-
-// const phone = await db.getPhone(request.user.sub);
-// response.json(tasks);
-
-// comment
-// client.messages.create({
-//   body: "Howdy!",
-//   from: "+12178852760",
-//   to: "+12246027354",
-// });
-// .then(message => console.log(message.sid));
+// var http = require("http");
+setInterval(function () {
+  http.get("http://<your app name>.herokuapp.com");
+}, 300000); // every 5 minutes (300000)
 
 // app.use("/api/affirmations", jwtCheck, affirmationsRouter);
 app.use("/api/tasks", jwtCheck, taskRouter);
