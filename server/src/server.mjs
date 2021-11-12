@@ -1,7 +1,8 @@
 // import dotenv from "dotenv";
+import http from "http";
+
 import express from "express";
 import mime from "mime-types";
-import http from "http";
 // import twilio from "twilio";
 
 // import affirmationsRouter from "./affirmationsRouter.mjs";
@@ -17,6 +18,7 @@ const app = express();
 // var http = require("http");
 setInterval(function () {
   http.get("http://<your app name>.herokuapp.com");
+  console.log("inside http get");
 }, 300000); // every 5 minutes (300000)
 
 // app.use("/api/affirmations", jwtCheck, affirmationsRouter);
