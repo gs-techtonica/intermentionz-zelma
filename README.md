@@ -34,10 +34,11 @@ REACT_APP_TWILIO_AUTH_TOKEN=<copy/paste your api key here>
 
 ## Receiving A Mention as SMS Text
 
-- If you would like to receive a Mention via text:
-  1. Add a new Mention to your table
-  2. Enter your phone number (click 'Enter Phone')
-  3. Click 'Get SMS' button - _et voila_!
+If you would like to receive a Mention via text:
+
+1. Add a new Mention to your table
+2. Enter your phone number (click 'Enter Phone')
+3. Click 'Get SMS' button - _et voila_!
 
 ## Technologies
 
