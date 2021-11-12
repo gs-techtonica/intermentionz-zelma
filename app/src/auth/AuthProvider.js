@@ -14,10 +14,21 @@ const AuthProvider = (props) => {
     navigate(appState?.returnTo || window.location.pathname);
   };
 
+  const useRefreshTokens = true;
+  const cacheLocation = "localstorage";
+
   return (
     <Auth0Provider
       redirectUri={window.location.origin}
-      {...{ domain, clientId, audience, onRedirectCallback, ...props }}
+      {...{
+        domain,
+        clientId,
+        audience,
+        onRedirectCallback,
+        useRefreshTokens,
+        cacheLocation,
+        ...props,
+      }}
     />
   );
 };
