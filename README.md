@@ -75,6 +75,13 @@ Dashboard
 
 ### :dizzy: See Zelma's Other Projects <a href='https://portfolio-zvs.herokuapp.com/'>Here!</a>
 
-## Contributors: :heart:
+## Contributors:
 
-<td align="center"><a href="https://github.com/gsong"><img src="https://avatars.githubusercontent.com/u/607420?v=4?s=100" width="100px;" alt=""/><br /><sub><b>George Song</b></sub></a><br /><a href="https://github.com/gsong/express-react-project-example/commits?author=gsong" title="Code">💻</a> <a href="https://github.com/gsong/express-react-project-example/commits?author=gsong" title="Documentation">📖</a> <a href="#infra-gsong" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#contributors" title="Ideas, Planning, & Feedback">🤔</a><a href="#maintenance-gsong" title="Maintenance">🚧</a></td>
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/gsong"><img src="https://avatars.githubusercontent.com/u/607420?v=4?s=100" width="100px;" alt=""/><br /><sub><b>George Song</b></sub></a><br /><a href="https://github.com/gsong/express-react-project-example/commits?author=gsong" title="Code">💻</a> <a href="https://github.com/gsong/express-react-project-example/commits?author=gsong" title="Documentation">📖</a> <a href="#infra-gsong" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#contributors" title="Ideas, Planning, & Feedback">🤔</a><a href="#maintenance-gsong" title="Maintenance">🚧</a></td>
+
+    <td align="center"><a href="https://www.tabbykatz.com/"><img src="https://avatars.githubusercontent.com/u/55110763?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tabitha O'Melay</b></sub></a><br /><a href="#contributors" title="Ideas, Planning, & Feedback">🤔</a><a href="#contributors" title="User Testing">📓</a><a href="#contributors" title="Reviewed Pull Requests">👀</a></td>
+
+  </tr>
+<table>
