@@ -10,7 +10,7 @@ Sending users their favorite Mention on a schedule so that they are reminded of 
 
 <img src="./serene.png">
 
-### See Zelma's Other Projects <a href='https://portfolio-zvs.herokuapp.com/'>Here!</a>
+### :dizzy: See Zelma's Other Projects <a href='https://portfolio-zvs.herokuapp.com/'>Here!</a>
 
 ## Running Locally
 
