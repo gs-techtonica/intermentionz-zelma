@@ -41,7 +41,8 @@ REACT_APP_TWILIO_AUTH_TOKEN=<copy/paste your api key here>
 
 ## Technologies
 
-Utilized the MVC Model, View, Control development technique using 3 main technologies. Model = PostgreSQL, View = React.js, Control = Express.js
+InterMention utilizes the MVC Model, View, Control design pattern using 3 main technologies:
+Model = PostgreSQL, View = React.js, Control = Express.js
 
 - PostgreSQL
 - React.js
