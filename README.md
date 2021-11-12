@@ -60,7 +60,7 @@ Model = PostgreSQL, View = React.js, Control = Express.js
 ## Stretch Goals
 
 - Send their favorite Mention/Affirmation to the user via text (Twilio SMS API) - ACHIEVED!
-- Send the user's SMS on a schedule (partly achieved but not implemented, yet)
+- Send the user's SMS on a schedule (partly achieved - yet to be implemented)
 
 ## Mockups & WireFrames
 
