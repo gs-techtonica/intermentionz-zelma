@@ -12,15 +12,6 @@ Sending users their favorite Mention on a schedule so that they are reminded of 
 
 <img src="./serene.png">
 
-## Technologies
-
-- React.js
-- PostgreSQL
-- Express.js
-- Raw CSS ('cuz I :heart: CSS)
-- Twilio SMS API
-- Auth0 API
-
 ## Running Locally
 
 1. Install & run <a href='https://www.docker.com/'>Docker</a>
@@ -47,6 +38,16 @@ REACT_APP_TWILIO_AUTH_TOKEN=<copy/paste your api key here>
   1. Add a new Mention to your table
   2. Enter your phone number (click 'Enter Phone')
   3. Click 'Get SMS' button - _et voila_!
+
+## Technologies
+
+- React.js
+- PostgreSQL
+- Express.js
+- Raw CSS ('cuz I :heart: CSS)
+- Twilio SMS API
+- Auth0 API
+- :muscle: Elbow Grease
 
 ## MVP (Minimal Viable Product)
 
