@@ -90,7 +90,7 @@ Special thanks to these folks ([emoji key](https://allcontributors.org/docs/en/e
     <tr>
     <td align="center"><a href="https://github.com/tabbykatz"><img src="https://avatars.githubusercontent.com/u/55110763?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tabitha O'Melay</b></br></sub></a>👀💬</td>
     <td align="center"><a href="https://github.com/jenhuynh"><img src="https://avatars.githubusercontent.com/u/15962197?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jen Huynh</b></br></sub></a>👀📢</td>
-    <td align="center"><a href="https://github.com/NatalieMonique111"><img src="https://avatars.githubusercontent.com/u/82853021?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Natalie Monique</b></br></sub></a>👀</td></br></sub></a>📢</td>
+    <td align="center"><a href="https://github.com/NatalieMonique111"><img src="https://avatars.githubusercontent.com/u/82853021?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Natalie Monique</b></br></sub>📢</td>
     <td align="center"><a href="https://github.com/xiaozhong21"><img src="https://avatars.githubusercontent.com/u/11522217?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Xiao Zhong</b></br></sub></a>👀</td></br></sub></a>📢</td>
     </tr>
   </tr>
