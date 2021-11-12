@@ -45,8 +45,8 @@ REACT_APP_TWILIO_AUTH_TOKEN=<copy/paste your api key here>
 
 - If you would like to receive a Mention via text:
   1. Add a new Mention to your table
-  - Enter your phone number (click 'Enter Phone')
-  - Click 'Get SMS' button - et voila!
+  2. Enter your phone number (click 'Enter Phone')
+  3. Click 'Get SMS' button - et voila!
 
 ## MVP (Minimal Viable Product)
 
