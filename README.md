@@ -57,9 +57,10 @@ Model = PostgreSQL, View = React.js, Control = Express.js
 - Applications uses an Affirmations API to consume a Quote of the Day
 - User can delete affirmations from table
 
-## Stretch Goal
+## Stretch Goals
 
 - Send their favorite Mention/Affirmation to the user via text (Twilio SMS API) - ACHIEVED!
+- Send the user's SMS on a schedule (partly achieved but not implemented, yet)
 
 ## Mockups & WireFrames
 
