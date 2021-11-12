@@ -50,7 +50,6 @@ Model = PostgreSQL, View = React.js, Control = Express.js
 - Raw CSS ('cuz I :heart: CSS)
 - Twilio SMS API
 - Auth0 API
-  (Elbow Grease :muscle:)
 
 ## MVP (Minimal Viable Product)
 
