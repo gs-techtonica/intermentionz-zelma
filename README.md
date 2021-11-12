@@ -41,9 +41,11 @@ REACT_APP_TWILIO_AUTH_TOKEN=<copy/paste your api key here>
 
 ## Technologies
 
-- PostgreSQL (Model)
-- React.js (View)
-- Express.js (Control)
+Utilized the MVC Model, View, Control development technique using 3 main technologies. Model = PostgreSQL, View = React.js, Control = Express.js
+
+- PostgreSQL
+- React.js
+- Express.js
 - Raw CSS ('cuz I :heart: CSS)
 - Twilio SMS API
 - Auth0 API
