@@ -41,6 +41,8 @@ REACT_APP_TWILIO_AUTH_TOKEN=<copy/paste your api key here>
 7. Also from the root directory, run `npm start`
 8. InterMention will be running on <a href='https://www.localhost:3000'>localhost:3000</a>
 
+## Receing Mention as SMS Text
+
 - If you would like to receive a Mention via text:
   - Add a new Mention to your table
   - Enter your phone number (click 'Enter Phone')
