@@ -99,10 +99,6 @@ button.login:hover {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover; */
-  position: fixed !important; /* keeps background image from when you scroll - gets rid of white space to the side and bottom of image */
-  z-index: -1;
-  height: 120vh;
-  width: 100%;
 
   background-repeat: no-repeat;
   background-position: center;
@@ -261,7 +257,11 @@ button.login:hover {
 
 @media screen and (max-width: 500px) {
   .dashboard-wrapper {
-    height: 136vh;
+    /* position: fixed !important;  */
+    /* keeps background image from when you scroll - gets rid of white space to the side and bottom of image */
+    z-index: -1;
+    height: 120vh;
+    width: 100vw;
   }
 
   .about-wrapper {

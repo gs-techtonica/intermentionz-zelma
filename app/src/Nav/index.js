@@ -64,7 +64,9 @@ const Nav = () => {
             </NavLink>
             {/* End Smooth Scroll Section */}
           </li>
-          <Auth />
+          <div className="login-btn">
+            <Auth className="auth-btn" />
+          </div>
           {/* <div className="dropdown">
             <i className="fas fa-user dropbtn"></i>
             <div class="dropdown-content">
