@@ -47,7 +47,7 @@ REACT_APP_TWILIO_AUTH_TOKEN=<copy/paste your api key here>
 - Raw CSS ('cuz I :heart: CSS)
 - Twilio SMS API
 - Auth0 API
-- :muscle: Elbow Grease
+- Elbow Grease :muscle:
 
 ## MVP (Minimal Viable Product)
 
