@@ -17,7 +17,7 @@ const app = express();
 
 // var http = require("http");
 setInterval(function () {
-  http.get("http://<your app name>.herokuapp.com");
+  http.get("http://intermentionz.herokuapp.com/");
   console.log("inside http get");
 }, 300000); // every 5 minutes (300000)
 
