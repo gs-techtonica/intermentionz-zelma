@@ -37,7 +37,7 @@ a {
   font-size: 3rem;
   /* width: 100%; */
   /* font-weight: 100; */
-  margin-left: 25px;
+  margin-left: 45px;
   align-items: center;
   text-decoration: none;
   color: white;
@@ -46,7 +46,7 @@ a {
 .logo-text {
   font-size: 2.2rem;
   margin-top: 10px;
-  margin-left: 10px;
+  margin-left: 20px;
   font-weight: 100;
   font-family: "Noto Sans JP", sans-serif;
   color: #a988e2;
