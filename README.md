@@ -2,7 +2,11 @@
 
 ## Capstone Project for Techtonica
 
-InterMention is a an application that utilizes the Cognitive Restructuring technique to Reinforce, Remind, and Redirect the user's thought process by having positive affirmations available at their fingertips. Users can add quotes and affirmations to their table, and remove quotes. In addition, InterMention will display a Quote of the Day from the Affirmations API.
+InterMention is a an application that utilizes the Cognitive Restructuring Repetition and Reminding technique to Reinforce and Redirect the user's thought process by having positive affirmations available at their fingertips. Users can add quotes and affirmations to their table, remove quotes, and text them to themselves using SMS. In addition, InterMention will display a Quote of the Day from the Affirmations API.
+
+## Upcoming Additions:
+
+Sending users their favorite reminder on a schedule so that they are reminded of something positive throughout their day, which can slowly over time counteract negative thought patterns
 
 <h3>View on Heroku: <a href='https://intermentionz.herokuapp.com/'  target='_blank'>InterMention</a><h3>
 
