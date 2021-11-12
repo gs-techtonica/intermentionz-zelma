@@ -76,7 +76,7 @@ Dashboard
 
 ### :dizzy: See Zelma's Other Projects <a href='https://portfolio-zvs.herokuapp.com/'>Here!</a>
 
-## Contributors:
+## ✨Contributors:
 
 Special thanks to these folks ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
