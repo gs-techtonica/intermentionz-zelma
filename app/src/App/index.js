@@ -33,10 +33,11 @@ const App = () => {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route
+          <Route path="/dashboard" element={Dashboard} />
+          {/* <Route
             path="/dashboard"
             element={<Protected component={Dashboard} />}
-          />
+          /> */}
           <Route path="/about" element={<Protected component={About} />} />
         </Routes>
       </main>
