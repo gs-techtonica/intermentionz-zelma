@@ -18,7 +18,9 @@ const app = express();
 // var http = require("http");
 setInterval(function () {
   http.get("http://intermentionz.herokuapp.com/");
-  console.log("inside http get");
+  let hours = new Date().getHours();
+  let minutes = new Date().getMinutes();
+  console.log(`pinging at ${hours}:${minutes}`);
 }, 30000); // every 5 minutes (300000)
 
 // app.use("/api/affirmations", jwtCheck, affirmationsRouter);
