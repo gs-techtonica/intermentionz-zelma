@@ -30,13 +30,13 @@ REACT_APP_TWILIO_AUTH_TOKEN=<copy/paste your api key here>
 7. Also from the root directory, run `npm start`
 8. InterMention will be running on <a href='https://www.localhost:3000'>localhost:3000</a>
 
-<!-- ## Receiving A Mention as SMS Text
+## Receiving A Mention as SMS Text
 
 If you would like to receive a Mention via text:
 
 1. Add a new Mention to your table
 2. Enter your phone number (click 'Enter Phone')
-3. Click 'Get SMS' button - _et voila_! -->
+3. Click 'Get SMS' button - _et voila_!
 
 ## Technologies
 
@@ -82,7 +82,7 @@ Special thanks to these folks ([emoji key](https://allcontributors.org/docs/en/e
 
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/gsong"><img src="https://avatars.githubusercontent.com/u/607420?v=4?s=100" width="100px;" alt=""/><br /><sub><b>George Song</b></sub></a><br /><a href="https://github.com/gsong/express-react-project-example/commits?author=gsong" title="Code"></a>💻📖🚇🚧</td>
+    <td align="center"><a href="https://github.com/gsong"><img src="https://avatars.githubusercontent.com/u/607420?v=4?s=100" width="100px;" alt=""/><br /><sub><b>George Song</b></sub></a><br /></a>💻📖🚇🚧</td>
     <td align="center"><a href="https://github.com/brenthaas"><img src="https://avatars.githubusercontent.com/u/1712361?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Brent Haas</b></sub><br /></a>🧑‍🏫💬💻</td>
     <td align="center"><a href="https://github.com/margaretgeary"><img src="https://avatars.githubusercontent.com/u/68314320?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Margaret Geary</b></sub><br /><a href="https://github.com/gsong/express-react-project-example/commits?author=gsong" title="Mentor"></a>🧑‍🏫🎨🤔⚠️</td>
     <td align="center"><a href="https://github.com/nbrengle"><img src="https://avatars.githubusercontent.com/u/3836628?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Nate Mooney</b></sub></br></a>🧑‍🏫💻🔬</td>
