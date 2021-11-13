@@ -19,7 +19,7 @@ const app = express();
 setInterval(function () {
   http.get("http://intermentionz.herokuapp.com/");
   console.log("inside http get");
-}, 30000); // every 5 minutes (300000)
+}, 10000); // every 5 minutes (300000)
 
 // app.use("/api/affirmations", jwtCheck, affirmationsRouter);
 app.use("/api/tasks", jwtCheck, taskRouter);

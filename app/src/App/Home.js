@@ -13,7 +13,6 @@ const Home = () => {
         <h1>{process.env.REACT_APP_TITLE}</h1>
         <p>{process.env.REACT_APP_SUBTITLE}</p>
       </header> */}
-      {/* isLoading removedu */}
       {isLoading ? (
         <>
           <div>Loading ...</div>
