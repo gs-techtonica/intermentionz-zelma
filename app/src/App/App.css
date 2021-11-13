@@ -260,7 +260,7 @@ button.login:hover {
     /* position: fixed !important;  */
     /* keeps background image from when you scroll - gets rid of white space to the side and bottom of image */
     z-index: -1;
-    height: 120vh;
+    height: 140vh;
     width: 100vw;
   }
 

@@ -6,6 +6,7 @@ import Dashboard from "./Dashboard";
 import "./App.css";
 const Home = () => {
   const { isLoading, isAuthenticated } = useAuth0();
+  console.log(isAuthenticated);
 
   return (
     <>

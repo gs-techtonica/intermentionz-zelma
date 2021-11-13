@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import useApi from "../auth/useApi";
 
 const API = () => {
-  const [otherQuote, setOtherQuote] = React.useState({});
+  // const [otherQuote, setOtherQuote] = React.useState({});
 
   const { apiClient } = useApi();
   const [responseObj, setResponseObj] = React.useState({});
@@ -20,7 +20,7 @@ const API = () => {
   );
   const addTask = (taskName) => apiClient.addTask(taskName).then(loadTasks);
 
-  const canAdd = task !== "";
+  // const canAdd = task !== "";
 
   const handleChange = () => {
     setTask(quote);
@@ -52,7 +52,7 @@ const API = () => {
       .then((response) => response.json())
 
       .then((response) => {
-        console.log(response); // success c
+        // console.log(response); // success c
         if (!response.success) {
           throw new Error();
         }
