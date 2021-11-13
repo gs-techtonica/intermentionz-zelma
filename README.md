@@ -1,6 +1,6 @@
 # InterMention - Change How You Think!
 
-InterMention is a an application that utilizes Psychology's Repetition & Reminding technique (Cognitive Restructuring) to Reinforce & Redirect the user's thought process. Users can add Mentions (affirmations) to their table, remove Mentions, and even have them sent as a text.
+InterMention is a an application that utilizes Psychology's Repetition & Reminding technique (Cognitive Restructuring) to Reinforce & Redirect the user's thought process. Users can use affirmations (Mentions) to counteract the effects of negative thoughts throughout their day by viewing their Mentions, adding new ones, and even having them sent to their phone as an SMS.
 
 In addition, InterMention has a Quote of the Day below the Affirmations Table to inspire the user with insightful and uplifting quotes.
 
