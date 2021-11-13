@@ -57,13 +57,13 @@ const TaskList = ({ tasks, deleteTask }) => {
   console.log(phone);
   const { apiClient } = useApi();
 
-  const updateTask = (id) => {
-    // making an object
-    const updatedTask = {
-      is_default: true,
-    };
-    apiClient.updateTask(id, updatedTask);
-  };
+  // const updateTask = (id) => {
+  //   // making an object
+  //   const updatedTask = {
+  //     is_default: true,
+  //   };
+  //   apiClient.updateTask(id, updatedTask);
+  // };
   // add phone number when user clicks 'enter phone' btn
   const addPhone = (phoneNum) => apiClient.addPhone(phoneNum);
   // console.log("phone: ", phone); - how to only print

@@ -1,15 +1,13 @@
 // Home Page
 import React from "react";
 
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 import Nav from "../Nav";
-import Tasks from "../Tasks";
 import useApi from "../auth/useApi";
 import useAuth0 from "../auth/useAuth0";
 import { Protected } from "../auth/widgets";
 
-import API from "./API";
 import About from "./About";
 import Dashboard from "./Dashboard";
 import Home from "./Home";

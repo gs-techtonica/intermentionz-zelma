@@ -82,7 +82,7 @@ const Nav = () => {
 };
 
 const Auth = () => {
-  const { isAuthenticated, user } = useAuth0();
+  const { isAuthenticated } = useAuth0();
 
   // when user is logged in, Logout shows; and vice versa
   return isAuthenticated ? (
