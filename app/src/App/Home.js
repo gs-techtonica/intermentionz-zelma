@@ -5,7 +5,7 @@ import useAuth0 from "../auth/useAuth0";
 import Dashboard from "./Dashboard";
 import "./App.css";
 const Home = () => {
-  const { isAuthenticated } = useAuth0();
+  const { isLoading, isAuthenticated } = useAuth0();
 
   return (
     <>
@@ -13,8 +13,12 @@ const Home = () => {
         <h1>{process.env.REACT_APP_TITLE}</h1>
         <p>{process.env.REACT_APP_SUBTITLE}</p>
       </header> */}
-      {/* isLoading removed b/c it was messing with Heroku */}
-      {!isAuthenticated ? (
+      {/* isLoading removedu */}
+      {isLoading ? (
+        <>
+          <div>Loading ...</div>
+        </>
+      ) : !isAuthenticated ? (
         <div>
           <div className="hero-wrapper">
             <section className="text-wrapper">
