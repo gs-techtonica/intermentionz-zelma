@@ -12,10 +12,6 @@ const Home = () => {
   const { isLoading, isAuthenticated } = useAuth0();
   // console.log("is authenticated: " + isAuthenticated);
 
-  const authentication = (isAuthenticated) => {
-    isAuthenticated = true;
-  };
-
   return (
     <>
       {/* <header className={styles.header}>
