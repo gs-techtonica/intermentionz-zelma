@@ -86,16 +86,8 @@ const TaskList = ({ tasks, deleteTask }) => {
 
   return (
     <div>
-      <div className="select-div">
-        <p className="select-text">
-          *Want to receive SMS texts of your favorite Mention?
-        </p>
-        <p className="select-text-2">
-          Select a Mention below, enter your Phone Number, and click 'Get SMS'
-        </p>
-      </div>
       <div className="table-wrapper">
-        <h1 className="table-header">Your Mentions / Reminders</h1>
+        <h1 className="table-header">Your Mentions & Affirmations</h1>
         <p className="default">*default</p>
         <table className="center">
           {/* <thead> */}
@@ -138,7 +130,7 @@ const TaskList = ({ tasks, deleteTask }) => {
           {/* pops up when you click 'Get SMS' */}
           <Popup
             className="pop"
-            trigger={<button className="get-sms">Enter Phone</button>}
+            trigger={<button className="enter-phone-btn">Enter Phone</button>}
             modal
           >
             <p className="phone-text">
@@ -156,12 +148,20 @@ const TaskList = ({ tasks, deleteTask }) => {
               </button>
             </div>
           </Popup>
-          <button className="get-text" onClick={() => sendSMS(taskId)}>
+          <button className="get-sms" onClick={() => sendSMS(taskId)}>
             Get SMS
           </button>
         </div>
         {/* error for when user doesn't make a selection before hitting 'Get SMS'*/}
         {errorMessage && <p className="error">{errorMessage}</p>}
+        <div className="select-div">
+          <p className="select-text">
+            *Want to receive SMS texts of your favorite Mention?
+          </p>
+          <p className="select-text-2">
+            Select a Mention above, enter your Phone No. and click 'Get SMS'
+          </p>
+        </div>
       </div>
     </div>
   );
