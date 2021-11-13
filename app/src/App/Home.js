@@ -1,12 +1,20 @@
 import React from "react";
 
+import Tasks from "../Tasks";
+// import useAuth0 from "../auth/useAuth0";
 import useAuth0 from "../auth/useAuth0";
 
-import Dashboard from "./Dashboard";
+import API from "./API";
+
+// import Dashboard from "./Dashboard";
 import "./App.css";
 const Home = () => {
   const { isLoading, isAuthenticated } = useAuth0();
-  console.log("is authenticated: " + isAuthenticated);
+  // console.log("is authenticated: " + isAuthenticated);
+
+  const authentication = (isAuthenticated) => {
+    isAuthenticated = true;
+  };
 
   return (
     <>
@@ -38,6 +46,17 @@ const Home = () => {
         </div>
       )}
     </>
+  );
+};
+
+const Dashboard = (addTask) => {
+  // const { user } = useAuth0();
+  // console.log(user); // checking the user object
+  return (
+    <div className="dashboard-wrapper">
+      <Tasks />
+      <API {...{ addTask }} />
+    </div>
   );
 };
 

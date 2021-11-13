@@ -10,12 +10,20 @@ import { Login, Logout } from "../auth/widgets";
 import "./Nav.css";
 
 const Nav = () => {
+  // imports & states
+  const { isAuthenticated } = useAuth0();
+  console.log("is authenticated: " + isAuthenticated);
   // used in handleclick(Hamburger/X) & closeMobileMenu(LINKS)
   const [click, setClick] = useState(false);
   // show button or not - used in useEffect
 
+  // functions
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
+  const authentication = (isAuthenticated) => {
+    isAuthenticated = true;
+  };
+
   return (
     <nav className="navbar">
       {/* <NavLink to="/" end>
@@ -65,7 +73,7 @@ const Nav = () => {
             {/* End Smooth Scroll Section */}
           </li>
           <div className="login-btn">
-            <Auth className="auth-btn" />
+            <Auth className="auth-btn" onClick={authentication} />
           </div>
           {/* <div className="dropdown">
             <i className="fas fa-user dropbtn"></i>
