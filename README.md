@@ -61,7 +61,6 @@ Model = PostgreSQL, View = React.js, Control = Express.js
 ## Stretch Goals
 
 - Send their favorite Mention/Affirmation to the user via text (Twilio SMS API) - ACHIEVED!
-  \*\*Although SMS is implemented and Zelma upgraded to a premium account, texts to unverified numbers is still not working, so only able to send texts to Zelma's number as of 11/12/21
 - Send the user's SMS on a schedule (added as an OpenSource Issue)
 
 ## Mockups & WireFrames
