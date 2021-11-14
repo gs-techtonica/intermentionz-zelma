@@ -31,14 +31,21 @@ Stuart can visit the site to view his Mentions, add new ones, and even have them
 
 1. Install & run <a href='https://www.docker.com/'>Docker</a>
 2. Fork & clone this repo
+3. Create a `.env` file in the source directory & add these lines:
+
+```
+AUTH0_DOMAIN=<copy/paste your domain here>
+AUTH0_AUDIENCE=<copy/paste your audience here>
+TWILIO_ACCOUNT_SID=<copy/paste your sid here>
+TWILIO_AUTH_TOKEN=<copy/paste your token here>
+```
+
 3. Create a `.env` file in the `app/` directory & add these lines:
 
 ```
-REACT_APP_AUTH0_DOMAIN=<copy/paste your api key here>
-REACT_APP_AUTH0_CLIENT_ID=<copy/paste your api key here>
-REACT_APP_AUTH0_AUDIENCE=<copy/paste your api key here>
-REACT_APP_TWILIO_ACCOUNT_SID=<copy/paste your api key here>
-REACT_APP_TWILIO_AUTH_TOKEN=<copy/paste your api key here>
+REACT_APP_AUTH0_DOMAIN=<copy/paste your domain here>
+REACT_APP_AUTH0_CLIENT_ID=<copy/paste your client id here>
+REACT_APP_AUTH0_AUDIENCE=<copy/paste your audience here>
 ```
 
 4. In your CLI, from the root directory, run `npm install`
