@@ -17,7 +17,7 @@ Sending users their favorite Mention on a schedule so that they are reminded of 
 Here is a designated test user you can log in with to try out InterMention:
 
 <!-- <img src="./stuart-smalley.jpg" > -->
-<img src="https://raw.githubusercontent.com/ZelmaSedano/intermentionz/main/stuart_2.gif" width="200px">
+<img src="https://raw.githubusercontent.com/ZelmaSedano/intermentionz/main/stuart_2.jpeg" width="200px">
 
 Stuart Smalley
 
@@ -40,7 +40,7 @@ TWILIO_ACCOUNT_SID=<copy/paste your sid here>
 TWILIO_AUTH_TOKEN=<copy/paste your token here>
 ```
 
-3. Create a `.env` file in the `app/` directory & add these lines:
+4. Create a `.env` file in the `app/` directory & add these lines:
 
 ```
 REACT_APP_AUTH0_DOMAIN=<copy/paste your domain here>
@@ -48,11 +48,11 @@ REACT_APP_AUTH0_CLIENT_ID=<copy/paste your client id here>
 REACT_APP_AUTH0_AUDIENCE=<copy/paste your audience here>
 ```
 
-4. In your CLI, from the root directory, run `npm install`
-5. Navigate into /app with `cd app` & run `npm install`
-6. Navigate back to the root directory & run `npm run db:init`
-7. Also from the root directory, run `npm start`
-8. InterMention will be running on <a href='https://www.localhost:3000'>localhost:3000</a>
+5. In your CLI, from the root directory, run `npm install`
+6. Navigate into /app with `cd app` & run `npm install`
+7. Navigate back to the root directory & run `npm run db:init`
+8. Also from the root directory, run `npm start`
+9. InterMention will be running on <a href='https://www.localhost:3000'>localhost:3000</a>
 
 ## Receiving A Mention as SMS Text
 
