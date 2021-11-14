@@ -19,8 +19,8 @@ Here is a designated test user you can log in with to try out InterMention:
 Lakshmi Singh
 
 <p><b>Email: </b>laskhmisingh207@gmail.com</p>
-<p><b>Password</b>Celery123!!</p>
-<p><b>Bio:</b>Yes, THAT Laskhmi Singh from NPR</p>
+<p><b>Password: </b>Celery123!!</p>
+<p><b>Bio: </b>Yes, THAT Laskhmi Singh from NPR</p>
 
 ## Running Locally
 
