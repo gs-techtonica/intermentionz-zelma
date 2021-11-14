@@ -16,6 +16,7 @@ Sending users their favorite Mention on a schedule so that they are reminded of 
 
 Here is a designated test user you can log in with to try out InterMention:
 
+<img src="https://raw.githubusercontent.com/ZelmaSedano/intermentionz/main/lakshmi.png" width="300px">
 Lakshmi Singh
 
 <p><b>Email: </b>laskhmisingh207@gmail.com</p>
