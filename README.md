@@ -12,6 +12,14 @@ Sending users their favorite Mention on a schedule so that they are reminded of 
 
 <img src="./serene.png">
 
+## Test User Login
+
+<p>Here is a designated test user you can log in with to try out InterMention:</p>
+<p>Lakshmi Singh</p>
+<p><b>Email: </b>laskhmisingh207@gmail.com</p>
+<p><b>Password</b>Celery123!!</p>
+<p><b>Bio:</b>Yes, THAT Laskhmi Singh from NPR</p>
+
 ## Running Locally
 
 1. Install & run <a href='https://www.docker.com/'>Docker</a>
