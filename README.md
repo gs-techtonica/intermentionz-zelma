@@ -16,7 +16,7 @@ Sending users their favorite Mention on a schedule so that they are reminded of 
 
 Here is a designated test user you can log in with to try out InterMention:
 
-<img src="./stuart-smalley.jpg" >
+<img src="./stuart.jpg" >
 
 Stuart Smalley
 
