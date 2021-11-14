@@ -1,6 +1,4 @@
 // import dotenv from "dotenv";
-import http from "http";
-
 import express from "express";
 import mime from "mime-types";
 // import twilio from "twilio";
@@ -14,14 +12,6 @@ import taskRouter from "./taskRouter.mjs";
 import userRouter from "./userRouter.mjs";
 
 const app = express();
-
-// var http = require("http");
-setInterval(function () {
-  http.get("http://intermentionz.herokuapp.com/");
-  let hours = new Date().getHours();
-  let minutes = new Date().getMinutes();
-  console.log(`pinging at ${hours}:${minutes}`);
-}, 30000); // every 5 minutes (300000)
 
 // app.use("/api/affirmations", jwtCheck, affirmationsRouter);
 app.use("/api/tasks", jwtCheck, taskRouter);
